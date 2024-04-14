@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "balloon")(type "KiCad")(uri "${KIPRJMOD}/balloon.pretty")(options "")(descr ""))
+)

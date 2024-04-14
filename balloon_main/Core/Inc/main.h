@@ -65,10 +65,16 @@ void Error_Handler(void);
 #define GPS_INT_GPIO_Port GPIOC
 #define GPS_RESET_Pin GPIO_PIN_3
 #define GPS_RESET_GPIO_Port GPIOC
+#define CTRL_SENSE_Pin GPIO_PIN_5
+#define CTRL_SENSE_GPIO_Port GPIOA
+#define CTRL_COMM_Pin GPIO_PIN_6
+#define CTRL_COMM_GPIO_Port GPIOA
 #define GPS_SAFE_Pin GPIO_PIN_6
 #define GPS_SAFE_GPIO_Port GPIOC
 #define RM92A_RESEST_Pin GPIO_PIN_7
 #define RM92A_RESEST_GPIO_Port GPIOC
+#define LED_OUT_Pin GPIO_PIN_8
+#define LED_OUT_GPIO_Port GPIOA
 #define BNO055_RESET_Pin GPIO_PIN_8
 #define BNO055_RESET_GPIO_Port GPIOB
 
