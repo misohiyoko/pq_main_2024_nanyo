@@ -727,8 +727,8 @@
     (property "Datasheet" "~" (at 111.76 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 87e07f6a-7add-484f-aeef-9e17f124de6c))
     (pin "1" (uuid eab64137-8b6f-4cc4-b32a-4838c6482e31))
+    (pin "2" (uuid 87e07f6a-7add-484f-aeef-9e17f124de6c))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/80e7dabd-e559-4d3b-ae6f-c3363518c8e6"
@@ -779,8 +779,8 @@
     (property "Datasheet" "~" (at 111.76 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 0d7689ca-e67d-4acf-8b87-dcd3a4a7ded0))
     (pin "1" (uuid c0646ee3-5f3e-4029-acd4-6c4896ddb15f))
+    (pin "2" (uuid 0d7689ca-e67d-4acf-8b87-dcd3a4a7ded0))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/80e7dabd-e559-4d3b-ae6f-c3363518c8e6"
@@ -805,8 +805,8 @@
     (property "Datasheet" "~" (at 111.76 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid c1f5eeba-1143-49f9-bec8-5a63503f4ec3))
     (pin "1" (uuid e9c197ca-97f8-47fd-b487-543ccc6ff83d))
+    (pin "2" (uuid c1f5eeba-1143-49f9-bec8-5a63503f4ec3))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/80e7dabd-e559-4d3b-ae6f-c3363518c8e6"
@@ -944,8 +944,8 @@
     (property "Datasheet" "~" (at 111.76 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 0e1595cc-4717-4c70-9bb7-e56cb064e09f))
     (pin "1" (uuid 88f2aadb-c43b-4714-b3f9-a582caa2a968))
+    (pin "2" (uuid 0e1595cc-4717-4c70-9bb7-e56cb064e09f))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/80e7dabd-e559-4d3b-ae6f-c3363518c8e6"
@@ -995,8 +995,8 @@
     (property "Datasheet" "~" (at 111.76 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 5ae9fa6d-b92a-4522-8b01-6139c26ea5e6))
     (pin "1" (uuid decc4398-c118-495f-a306-2e73db2d8651))
+    (pin "2" (uuid 5ae9fa6d-b92a-4522-8b01-6139c26ea5e6))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/80e7dabd-e559-4d3b-ae6f-c3363518c8e6"
@@ -1047,8 +1047,8 @@
     (property "Datasheet" "~" (at 111.76 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 515b7667-365c-46b4-ae91-98e78f7816a2))
     (pin "1" (uuid 9df6d6b4-1028-40f6-bb14-cdb2665e53a7))
+    (pin "2" (uuid 515b7667-365c-46b4-ae91-98e78f7816a2))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/80e7dabd-e559-4d3b-ae6f-c3363518c8e6"

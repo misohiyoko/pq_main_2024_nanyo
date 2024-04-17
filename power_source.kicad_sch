@@ -1687,8 +1687,8 @@
     (property "Datasheet" "~" (at 73.66 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid aab333d3-e5c1-40d9-b798-2bcf307b21d2))
     (pin "1" (uuid de333674-d336-4369-94c1-d87c62e33fcf))
+    (pin "2" (uuid aab333d3-e5c1-40d9-b798-2bcf307b21d2))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/a8964fff-36f8-4d65-a455-a6f79e0406e2"
@@ -1827,11 +1827,11 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/22072b.pdf" (at 184.15 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "5" (uuid 1eb931cf-f7e1-4ee1-b378-314516b1cf8f))
-    (pin "4" (uuid 9a013875-4a72-455f-af4a-374eeb13de0f))
     (pin "1" (uuid d10c8bd0-dfbb-40ec-950c-c324830b6746))
-    (pin "3" (uuid a22e4f5a-ea15-4439-b2c4-a4fa2a95ac80))
     (pin "2" (uuid 03e78c35-4fb4-4083-be80-00bf3bd7938a))
+    (pin "3" (uuid a22e4f5a-ea15-4439-b2c4-a4fa2a95ac80))
+    (pin "4" (uuid 9a013875-4a72-455f-af4a-374eeb13de0f))
+    (pin "5" (uuid 1eb931cf-f7e1-4ee1-b378-314516b1cf8f))
     (pin "6" (uuid 4eb2cd35-3146-4ca6-a328-3711a156619a))
     (instances
       (project "balloon"
@@ -1967,8 +1967,8 @@
     (property "Datasheet" "" (at 176.53 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid d3a0c38b-e278-4ea5-bc7c-6ae28469cc5d))
     (pin "1" (uuid fa449fbe-c053-45d1-8c78-54eb2146838e))
+    (pin "2" (uuid d3a0c38b-e278-4ea5-bc7c-6ae28469cc5d))
     (pin "3" (uuid 05ed8690-eb93-412e-bb80-ebc7f1ebce50))
     (instances
       (project "balloon"
@@ -2023,8 +2023,8 @@
     (property "Datasheet" "~" (at 39.37 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid dbb7bb49-7ccb-4371-ab6d-9c11466ea077))
     (pin "1" (uuid 090c483e-5723-4bdb-b6cd-1d47722d3f63))
+    (pin "2" (uuid dbb7bb49-7ccb-4371-ab6d-9c11466ea077))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/a8964fff-36f8-4d65-a455-a6f79e0406e2"
@@ -2104,11 +2104,11 @@
     (property "Datasheet" "" (at 250.19 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (pin "1" (uuid a515ebd7-40cf-4075-a2d0-21b493c14a04))
     (pin "2" (uuid 1fdb4f4d-44ab-4d21-ad66-f2e0bce52009))
     (pin "3" (uuid 2df567d6-46f1-48e7-a478-cbcfa5fc6837))
-    (pin "1" (uuid a515ebd7-40cf-4075-a2d0-21b493c14a04))
-    (pin "5" (uuid 11460ad8-b61e-47c2-af2f-6682dca803c7))
     (pin "4" (uuid c517e922-71ff-4033-903e-0a6eacdac74a))
+    (pin "5" (uuid 11460ad8-b61e-47c2-af2f-6682dca803c7))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/a8964fff-36f8-4d65-a455-a6f79e0406e2"
@@ -2304,9 +2304,9 @@
     (property "Datasheet" "~" (at 93.98 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "3" (uuid 6a077f16-d99c-49de-b5f1-5c7a89c070c9))
-    (pin "2" (uuid 07ae4d4f-6fd9-420b-8d24-5bc94dbe7d2d))
     (pin "1" (uuid e48c916c-b1d6-43d7-947b-f8f781f04898))
+    (pin "2" (uuid 07ae4d4f-6fd9-420b-8d24-5bc94dbe7d2d))
+    (pin "3" (uuid 6a077f16-d99c-49de-b5f1-5c7a89c070c9))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/a8964fff-36f8-4d65-a455-a6f79e0406e2"
@@ -2434,7 +2434,7 @@
     (property "Reference" "R30" (at 84.328 82.6079 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10k" (at 84.328 85.0321 0)
+    (property "Value" "47k" (at 84.328 85.0321 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 80.772 83.82 90)
@@ -2469,11 +2469,11 @@
     (property "Datasheet" "" (at 250.19 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (pin "1" (uuid 3a5bc53c-65cf-489a-9292-103ca33098da))
     (pin "2" (uuid d5762231-c19d-4de5-a5eb-e092182bc863))
     (pin "3" (uuid 5fc2af6e-9255-4a80-b0f2-1c056b5b6c42))
-    (pin "1" (uuid 3a5bc53c-65cf-489a-9292-103ca33098da))
-    (pin "5" (uuid 3b987ddd-2646-4fb7-b65d-b289f88afd75))
     (pin "4" (uuid d48a4bd8-1e7d-495c-acb4-77ee074b1fea))
+    (pin "5" (uuid 3b987ddd-2646-4fb7-b65d-b289f88afd75))
     (instances
       (project "balloon"
         (path "/390c33b5-3f3b-4c86-a202-e8d785058178/a8964fff-36f8-4d65-a455-a6f79e0406e2"
