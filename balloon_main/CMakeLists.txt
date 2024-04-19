@@ -50,6 +50,7 @@ else ()
 endif ()
 
 include_directories(Core/Inc Drivers/STM32L4xx_HAL_Driver/Inc Drivers/STM32L4xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32L4xx/Include Drivers/CMSIS/Include FATFS/Target FATFS/App Middlewares/Third_Party/FatFs/src)
+include_directories(Core/library)
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32L431xx)
 

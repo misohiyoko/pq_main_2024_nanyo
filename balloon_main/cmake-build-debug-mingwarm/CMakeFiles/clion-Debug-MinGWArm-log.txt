@@ -1,0 +1,5 @@
+D:\jetbrains\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/jetbrains/CLion/bin/ninja/win/x64/ninja.exe -DCMAKE_C_COMPILER=C:/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe -DCMAKE_CXX_COMPILER=C:/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-g++.exe -G Ninja -S C:\Users\genta\STM32CubeIDE\workspace_1.14.0\ws2\balloon_2024_nanyo\balloon_main -B C:\Users\genta\STM32CubeIDE\workspace_1.14.0\ws2\balloon_2024_nanyo\balloon_main\cmake-build-debug-mingwarm
+-- Minimal optimization, debug info included
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/cmake-build-debug-mingwarm
