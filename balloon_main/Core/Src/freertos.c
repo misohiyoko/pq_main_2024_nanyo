@@ -54,21 +54,6 @@ const osThreadAttr_t defaultTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
-/* Definitions for i2c1Sem */
-osSemaphoreId_t i2c1SemHandle;
-const osSemaphoreAttr_t i2c1Sem_attributes = {
-  .name = "i2c1Sem"
-};
-/* Definitions for i2c2Sem */
-osSemaphoreId_t i2c2SemHandle;
-const osSemaphoreAttr_t i2c2Sem_attributes = {
-  .name = "i2c2Sem"
-};
-/* Definitions for i2c3Sem */
-osSemaphoreId_t i2c3SemHandle;
-const osSemaphoreAttr_t i2c3Sem_attributes = {
-  .name = "i2c3Sem"
-};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -92,16 +77,6 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
-
-  /* Create the semaphores(s) */
-  /* creation of i2c1Sem */
-  i2c1SemHandle = osSemaphoreNew(1, 0, &i2c1Sem_attributes);
-
-  /* creation of i2c2Sem */
-  i2c2SemHandle = osSemaphoreNew(1, 0, &i2c2Sem_attributes);
-
-  /* creation of i2c3Sem */
-  i2c3SemHandle = osSemaphoreNew(1, 0, &i2c3Sem_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */

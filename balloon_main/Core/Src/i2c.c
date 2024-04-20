@@ -360,9 +360,6 @@ void HAL_I2C_MspDeInit(I2C_HandleTypeDef* i2cHandle)
 /* USER CODE BEGIN 1 */
 void HAL_I2C_MemRxCpltCallback(I2C_HandleTypeDef *hi2c)
 {
-    switch (hi2c->Instance) {
-        case I2C1:
-            
-    }
+
 }
 /* USER CODE END 1 */
