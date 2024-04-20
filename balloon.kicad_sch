@@ -2812,6 +2812,11 @@
     (uuid ff6bed0c-7e64-42c4-b03e-60df8c86e957)
   )
 
+  (text "とりあえずブリッジさせる" (at 67.31 60.96 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid f5abf7bb-cdc7-49c1-a1a8-f1cf19cc5feb)
+  )
+
   (label "I2C1_SDA" (at 266.7 128.27 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 0248725e-4187-4881-a702-d09cbb025ecb)
@@ -4035,7 +4040,7 @@
     (pin "2" (uuid 0f70fc4d-2e30-4bfa-8968-7d1ba8012e99))
     (pin "3" (uuid d6d12a3a-4e98-4a3a-a7a4-9b8934882f23))
     (pin "4" (uuid 8a1807dd-a24d-4d12-b7ba-2079a7feb537))
-    (pin "5" (uuid 91350b29-59f7-44c8-ad6b-58e4f69a4263))
+    (pin "5" (uuid 91350b29-59f7-44c8-ad6b-58e4f69a4264))
     (pin "5" (uuid 91350b29-59f7-44c8-ad6b-58e4f69a4264))
     (pin "6" (uuid 746e12a8-eb2c-4203-8418-7a494f230c9d))
     (pin "7" (uuid 6526ad5b-6fe3-4f96-9f0a-63a7df5f5f7f))
