@@ -14,6 +14,6 @@ D:\jetbrains\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCM
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Minimal optimization, debug info included
--- Configuring done (4.8s)
--- Generating done (0.1s)
+-- Configuring done (2.0s)
+-- Generating done (0.0s)
 -- Build files have been written to: C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/cmake-build-debug-mingwarm

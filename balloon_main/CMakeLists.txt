@@ -53,7 +53,7 @@ include_directories(Core/Inc Drivers/STM32L4xx_HAL_Driver/Inc Drivers/STM32L4xx_
 include_directories(Core/library)
 include_directories(Core/tasks)
 
-add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32L431xx)
+add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32L431xx -DUSE_FULL_LL_DRIVER)
 
 file(GLOB_RECURSE SOURCES "Core/*.*" "CMSIS/*.*" "FATFS/*.*" "Middlewares/*.*" "Drivers/*.*")
 

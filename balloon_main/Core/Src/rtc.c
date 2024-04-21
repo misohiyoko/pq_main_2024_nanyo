@@ -150,23 +150,5 @@ void HAL_RTC_MspDeInit(RTC_HandleTypeDef* rtcHandle)
 }
 
 /* USER CODE BEGIN 1 */
-uint32_t RTC_GET_UNIX(){
-    RTC_DateTypeDef date;
-    RTC_TimeTypeDef time;
 
-    time_t t_of_day;
-    struct tm timeinfo;
-
-    HAL_RTCEx_GetTimeStamp(&hrtc,&time, &date, RTC_FORMAT_BCD);
-    timeinfo.tm_year = date.Year;
-    timeinfo.tm_mon = date.Month;
-    timeinfo.tm_mday = date.Date;
-    timeinfo.tm_hour  = time.Hours;
-    timeinfo.tm_min = time.Minutes;
-    timeinfo.tm_sec = time.Seconds;
-    timeinfo.tm_isdst = -1;
-
-    t_of_day = mktime(&timeinfo);
-    rtc_update_time = HAL_GetTick();
-}
 /* USER CODE END 1 */

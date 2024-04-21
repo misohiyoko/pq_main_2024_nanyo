@@ -10,6 +10,7 @@
 #include "FreeRTOS.h"
 #include "queue.h"
 #include "rtc.h"
+#include "time.h"
 #define BNO055_API
 #ifdef  BNO055_API
 #define BNO055_I2C_BUS_WRITE_ARRAY_INDEX ((u8)1)
@@ -27,6 +28,7 @@ struct bno055_result_t{
     struct bno055_gravity_t gravity;
     struct bno055_linear_accel_t linearAccel;
     struct bno055_euler_t euler;
+    time_t timestamp;
 };
 /*  \Brief: The API is used as I2C bus read
  *  \Return : Status of the I2C read

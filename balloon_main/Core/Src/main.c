@@ -105,7 +105,6 @@ int main(void)
   MX_SDMMC1_SD_Init();
   MX_CRC_Init();
   MX_USART3_UART_Init();
-  MX_LPTIM2_Init();
   MX_I2C2_Init();
   MX_I2C3_Init();
   MX_USART2_UART_Init();
@@ -113,6 +112,7 @@ int main(void)
   MX_SPI2_Init();
   MX_TIM1_Init();
   MX_FATFS_Init();
+  MX_LPTIM1_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
