@@ -32,13 +32,10 @@ extern "C" {
 
 /* USER CODE END Includes */
 
-extern UART_HandleTypeDef huart1;
-
-extern UART_HandleTypeDef huart2;
-
-extern UART_HandleTypeDef huart3;
-
 /* USER CODE BEGIN Private defines */
+#define ARRAY_LEN(x)            (sizeof(x) / sizeof((x)[0]))
+
+
 
 /* USER CODE END Private defines */
 
@@ -47,7 +44,12 @@ void MX_USART2_UART_Init(void);
 void MX_USART3_UART_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+void usart_rx_check(uint8_t* buffer,uint32_t len, DMA_TypeDef *DMAx, uint32_t Channel, USART_TypeDef* USARTx);
+void usart_process_data(const void* data, size_t len, USART_TypeDef* USARTx);
+void usart_send_string(const char* str,USART_TypeDef* USARTx);
+uint8_t uart1_buffer[256];
+uint8_t uart2_buffer[256];
+uint8_t uart3_buffer[256];
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

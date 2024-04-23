@@ -195,6 +195,8 @@ s32 bno055_get_data(struct bno055_result_t * bno055Result){
      * register - 0x2E to 0x33 */
     comres += bno055_read_gravity_xyz(&bno055Result->gravity);
 
+    bno055Result->timestamp = HAL_GetTick();
+
     /************************* END READ RAW FUSION DATA  ************/
 
     /*  API used to read accel data output as double  - m/s2 and mg
