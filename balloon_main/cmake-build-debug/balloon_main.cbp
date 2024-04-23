@@ -24,9 +24,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32L431xx"/>
+					<Add option="-DUSE_FULL_LL_DRIVER"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Core/Inc"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"/>
@@ -35,6 +39,13 @@
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/FATFS/Target"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/FATFS/App"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FatFs/src"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Core/library"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Core/tasks"/>
 					<Add directory="C:/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="C:/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="C:/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -56,9 +67,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32L431xx"/>
+					<Add option="-DUSE_FULL_LL_DRIVER"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Core/Inc"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"/>
@@ -67,6 +82,13 @@
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/FATFS/Target"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/FATFS/App"/>
 					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FatFs/src"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Core/library"/>
+					<Add directory="C:/Users/genta/Desktop/balloon/balloon_main/Core/tasks"/>
 					<Add directory="C:/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="C:/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="C:/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -102,6 +124,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/Inc/FreeRTOSConfig.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/Inc/crc.h">
 			<Option target="balloon_main.elf"/>
 		</Unit>
@@ -129,6 +154,9 @@
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/Inc/spi.h">
 			<Option target="balloon_main.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/Inc/stm32_assert.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/Inc/stm32l4xx_hal_conf.h">
 			<Option target="balloon_main.elf"/>
 		</Unit>
@@ -145,6 +173,9 @@
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/Src/dma.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/Src/freertos.c">
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/Src/gpio.c">
@@ -193,6 +224,24 @@
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/Startup/startup_stm32l431rbtx.s">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/tasks/gnss/gnss_task.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/tasks/gnss/gnss_task.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/tasks/imu/imu_task.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/tasks/imu/imu_task.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/tasks/time/time_task.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Core/tasks/time/time_task.h">
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l431xx.h">
@@ -372,12 +421,6 @@
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h">
 			<Option target="balloon_main.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h">
-			<Option target="balloon_main.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h">
-			<Option target="balloon_main.elf"/>
-		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_bus.h">
 			<Option target="balloon_main.elf"/>
 		</Unit>
@@ -406,9 +449,6 @@
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_lptim.h">
-			<Option target="balloon_main.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_lpuart.h">
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h">
@@ -519,13 +559,25 @@
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c">
 			<Option target="balloon_main.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c">
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c">
 			<Option target="balloon_main.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c">
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c">
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c">
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/FATFS/App/fatfs.c">
@@ -538,6 +590,12 @@
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/FATFS/Target/bsp_driver_sd.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/FATFS/Target/fatfs_platform.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/FATFS/Target/fatfs_platform.h">
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/FATFS/Target/ffconf.h">
@@ -799,6 +857,105 @@
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FatFs/src/option/syscall.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_mpool.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/atomic.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/list.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/task.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/list.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+			<Option target="balloon_main.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
 			<Option target="balloon_main.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/genta/Desktop/balloon/balloon_main/STM32L431RBTX_FLASH.ld">

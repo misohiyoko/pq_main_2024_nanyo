@@ -176,6 +176,30 @@ Core/Src/dma.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/dma.c.s
 .PHONY : Core/Src/dma.c.s
 
+Core/Src/freertos.obj: Core/Src/freertos.c.obj
+.PHONY : Core/Src/freertos.obj
+
+# target to build an object file
+Core/Src/freertos.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/freertos.c.obj
+.PHONY : Core/Src/freertos.c.obj
+
+Core/Src/freertos.i: Core/Src/freertos.c.i
+.PHONY : Core/Src/freertos.i
+
+# target to preprocess a source file
+Core/Src/freertos.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/freertos.c.i
+.PHONY : Core/Src/freertos.c.i
+
+Core/Src/freertos.s: Core/Src/freertos.c.s
+.PHONY : Core/Src/freertos.s
+
+# target to generate assembly for a file
+Core/Src/freertos.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/freertos.c.s
+.PHONY : Core/Src/freertos.c.s
+
 Core/Src/gpio.obj: Core/Src/gpio.c.obj
 .PHONY : Core/Src/gpio.obj
 
@@ -543,6 +567,78 @@ Core/Startup/startup_stm32l431rbtx.obj: Core/Startup/startup_stm32l431rbtx.s.obj
 Core/Startup/startup_stm32l431rbtx.s.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Startup/startup_stm32l431rbtx.s.obj
 .PHONY : Core/Startup/startup_stm32l431rbtx.s.obj
+
+Core/tasks/gnss/gnss_task.obj: Core/tasks/gnss/gnss_task.c.obj
+.PHONY : Core/tasks/gnss/gnss_task.obj
+
+# target to build an object file
+Core/tasks/gnss/gnss_task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/gnss/gnss_task.c.obj
+.PHONY : Core/tasks/gnss/gnss_task.c.obj
+
+Core/tasks/gnss/gnss_task.i: Core/tasks/gnss/gnss_task.c.i
+.PHONY : Core/tasks/gnss/gnss_task.i
+
+# target to preprocess a source file
+Core/tasks/gnss/gnss_task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/gnss/gnss_task.c.i
+.PHONY : Core/tasks/gnss/gnss_task.c.i
+
+Core/tasks/gnss/gnss_task.s: Core/tasks/gnss/gnss_task.c.s
+.PHONY : Core/tasks/gnss/gnss_task.s
+
+# target to generate assembly for a file
+Core/tasks/gnss/gnss_task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/gnss/gnss_task.c.s
+.PHONY : Core/tasks/gnss/gnss_task.c.s
+
+Core/tasks/imu/imu_task.obj: Core/tasks/imu/imu_task.c.obj
+.PHONY : Core/tasks/imu/imu_task.obj
+
+# target to build an object file
+Core/tasks/imu/imu_task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/imu/imu_task.c.obj
+.PHONY : Core/tasks/imu/imu_task.c.obj
+
+Core/tasks/imu/imu_task.i: Core/tasks/imu/imu_task.c.i
+.PHONY : Core/tasks/imu/imu_task.i
+
+# target to preprocess a source file
+Core/tasks/imu/imu_task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/imu/imu_task.c.i
+.PHONY : Core/tasks/imu/imu_task.c.i
+
+Core/tasks/imu/imu_task.s: Core/tasks/imu/imu_task.c.s
+.PHONY : Core/tasks/imu/imu_task.s
+
+# target to generate assembly for a file
+Core/tasks/imu/imu_task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/imu/imu_task.c.s
+.PHONY : Core/tasks/imu/imu_task.c.s
+
+Core/tasks/time/time_task.obj: Core/tasks/time/time_task.c.obj
+.PHONY : Core/tasks/time/time_task.obj
+
+# target to build an object file
+Core/tasks/time/time_task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/time/time_task.c.obj
+.PHONY : Core/tasks/time/time_task.c.obj
+
+Core/tasks/time/time_task.i: Core/tasks/time/time_task.c.i
+.PHONY : Core/tasks/time/time_task.i
+
+# target to preprocess a source file
+Core/tasks/time/time_task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/time/time_task.c.i
+.PHONY : Core/tasks/time/time_task.c.i
+
+Core/tasks/time/time_task.s: Core/tasks/time/time_task.c.s
+.PHONY : Core/tasks/time/time_task.s
+
+# target to generate assembly for a file
+Core/tasks/time/time_task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/time/time_task.c.s
+.PHONY : Core/tasks/time/time_task.c.s
 
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
 .PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.obj
@@ -1168,53 +1264,101 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.s
 .PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.s
 
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.obj
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.obj
 
 # target to build an object file
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.obj
 
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.i: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.i
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.i
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.i: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.i
 
 # target to preprocess a source file
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.i
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.i
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.i
 
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.s: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.s
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.s
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.s: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.s
 
 # target to generate assembly for a file
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.s
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.s
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c.s
 
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.obj
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.obj
 
 # target to build an object file
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.obj
 
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.i: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.i
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.i
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.i: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.i
 
 # target to preprocess a source file
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.i
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.i
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.i
 
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.s: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.s
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.s
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.s: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.s
 
 # target to generate assembly for a file
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.s
-.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.s
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c.s
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.obj
+
+# target to build an object file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.obj
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.i: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.i
+
+# target to preprocess a source file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.i
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.s: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.s
+
+# target to generate assembly for a file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c.s
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.obj
+
+# target to build an object file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.obj
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.i: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.i
+
+# target to preprocess a source file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.i
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.s: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.s
+
+# target to generate assembly for a file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c.s
 
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.c.obj
 .PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.obj
@@ -1239,6 +1383,54 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.s: Drivers/STM32L4xx_HAL_Dri
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.c.s
 .PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.c.s
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.obj
+
+# target to build an object file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.obj
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.i: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.i
+
+# target to preprocess a source file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.i
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.s: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.s
+
+# target to generate assembly for a file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c.s
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.obj
+
+# target to build an object file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.obj
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.obj
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.i: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.i
+
+# target to preprocess a source file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.i
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.i
+
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.s: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.s
+
+# target to generate assembly for a file
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.s
+.PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c.s
 
 FATFS/App/fatfs.obj: FATFS/App/fatfs.c.obj
 .PHONY : FATFS/App/fatfs.obj
@@ -1287,6 +1479,30 @@ FATFS/Target/bsp_driver_sd.s: FATFS/Target/bsp_driver_sd.c.s
 FATFS/Target/bsp_driver_sd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/FATFS/Target/bsp_driver_sd.c.s
 .PHONY : FATFS/Target/bsp_driver_sd.c.s
+
+FATFS/Target/fatfs_platform.obj: FATFS/Target/fatfs_platform.c.obj
+.PHONY : FATFS/Target/fatfs_platform.obj
+
+# target to build an object file
+FATFS/Target/fatfs_platform.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/FATFS/Target/fatfs_platform.c.obj
+.PHONY : FATFS/Target/fatfs_platform.c.obj
+
+FATFS/Target/fatfs_platform.i: FATFS/Target/fatfs_platform.c.i
+.PHONY : FATFS/Target/fatfs_platform.i
+
+# target to preprocess a source file
+FATFS/Target/fatfs_platform.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/FATFS/Target/fatfs_platform.c.i
+.PHONY : FATFS/Target/fatfs_platform.c.i
+
+FATFS/Target/fatfs_platform.s: FATFS/Target/fatfs_platform.c.s
+.PHONY : FATFS/Target/fatfs_platform.s
+
+# target to generate assembly for a file
+FATFS/Target/fatfs_platform.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/FATFS/Target/fatfs_platform.c.s
+.PHONY : FATFS/Target/fatfs_platform.c.s
 
 FATFS/Target/sd_diskio.obj: FATFS/Target/sd_diskio.c.obj
 .PHONY : FATFS/Target/sd_diskio.obj
@@ -2080,6 +2296,246 @@ Middlewares/Third_Party/FatFs/src/option/syscall.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FatFs/src/option/syscall.c.s
 .PHONY : Middlewares/Third_Party/FatFs/src/option/syscall.c.s
 
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
+
+Middlewares/Third_Party/FreeRTOS/Source/croutine.obj: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/croutine.i: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/croutine.s: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
+
+Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/event_groups.i: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/event_groups.s: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
+
+Middlewares/Third_Party/FreeRTOS/Source/list.obj: Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/list.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/list.i: Middlewares/Third_Party/FreeRTOS/Source/list.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/list.s: Middlewares/Third_Party/FreeRTOS/Source/list.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.s
+
+Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.obj: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.i: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.s: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
+
+Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
+
+Middlewares/Third_Party/FreeRTOS/Source/queue.obj: Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/queue.i: Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/queue.s: Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
+
+Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
+
+Middlewares/Third_Party/FreeRTOS/Source/tasks.obj: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/tasks.i: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/tasks.s: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
+
+Middlewares/Third_Party/FreeRTOS/Source/timers.obj: Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.obj
+
+# target to build an object file
+Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+
+Middlewares/Third_Party/FreeRTOS/Source/timers.i: Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.i
+
+# target to preprocess a source file
+Middlewares/Third_Party/FreeRTOS/Source/timers.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
+
+Middlewares/Third_Party/FreeRTOS/Source/timers.s: Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.s
+
+# target to generate assembly for a file
+Middlewares/Third_Party/FreeRTOS/Source/timers.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -2095,6 +2551,9 @@ help:
 	@echo ... Core/Src/dma.obj
 	@echo ... Core/Src/dma.i
 	@echo ... Core/Src/dma.s
+	@echo ... Core/Src/freertos.obj
+	@echo ... Core/Src/freertos.i
+	@echo ... Core/Src/freertos.s
 	@echo ... Core/Src/gpio.obj
 	@echo ... Core/Src/gpio.i
 	@echo ... Core/Src/gpio.s
@@ -2141,6 +2600,15 @@ help:
 	@echo ... Core/Src/usart.i
 	@echo ... Core/Src/usart.s
 	@echo ... Core/Startup/startup_stm32l431rbtx.obj
+	@echo ... Core/tasks/gnss/gnss_task.obj
+	@echo ... Core/tasks/gnss/gnss_task.i
+	@echo ... Core/tasks/gnss/gnss_task.s
+	@echo ... Core/tasks/imu/imu_task.obj
+	@echo ... Core/tasks/imu/imu_task.i
+	@echo ... Core/tasks/imu/imu_task.s
+	@echo ... Core/tasks/time/time_task.obj
+	@echo ... Core/tasks/time/time_task.i
+	@echo ... Core/tasks/time/time_task.s
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.obj
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.i
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.s
@@ -2219,21 +2687,36 @@ help:
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.obj
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.i
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.s
-	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.obj
-	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.i
-	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.s
-	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.obj
-	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.i
-	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.s
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.obj
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.i
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.s
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.obj
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.i
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.s
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.obj
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.i
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.s
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.obj
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.i
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.s
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.obj
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.i
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.s
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.obj
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.i
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.s
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.obj
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.i
+	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.s
 	@echo ... FATFS/App/fatfs.obj
 	@echo ... FATFS/App/fatfs.i
 	@echo ... FATFS/App/fatfs.s
 	@echo ... FATFS/Target/bsp_driver_sd.obj
 	@echo ... FATFS/Target/bsp_driver_sd.i
 	@echo ... FATFS/Target/bsp_driver_sd.s
+	@echo ... FATFS/Target/fatfs_platform.obj
+	@echo ... FATFS/Target/fatfs_platform.i
+	@echo ... FATFS/Target/fatfs_platform.s
 	@echo ... FATFS/Target/sd_diskio.obj
 	@echo ... FATFS/Target/sd_diskio.i
 	@echo ... FATFS/Target/sd_diskio.s
@@ -2333,6 +2816,36 @@ help:
 	@echo ... Middlewares/Third_Party/FatFs/src/option/syscall.obj
 	@echo ... Middlewares/Third_Party/FatFs/src/option/syscall.i
 	@echo ... Middlewares/Third_Party/FatFs/src/option/syscall.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/croutine.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/croutine.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/croutine.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/event_groups.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/event_groups.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/list.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/list.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/list.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/queue.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/queue.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/queue.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/tasks.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/tasks.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/tasks.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/timers.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/timers.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/timers.s
 .PHONY : help
 
 
