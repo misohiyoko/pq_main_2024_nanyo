@@ -61,6 +61,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -79,9 +81,6 @@ void Error_Handler(void);
 #define CTRL_SENSE_GPIO_Port GPIOA
 #define CTRL_COMM_Pin GPIO_PIN_6
 #define CTRL_COMM_GPIO_Port GPIOA
-#define GPIO_PPS_Pin GPIO_PIN_1
-#define GPIO_PPS_GPIO_Port GPIOB
-#define GPIO_PPS_EXTI_IRQn EXTI1_IRQn
 #define GPS_SAFE_Pin GPIO_PIN_6
 #define GPS_SAFE_GPIO_Port GPIOC
 #define RM92A_RESEST_Pin GPIO_PIN_7

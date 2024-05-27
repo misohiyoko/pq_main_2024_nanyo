@@ -1,3 +1,0 @@
-C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/cmake-build-debug-mingwarm/CMakeFiles/balloon_main.elf.dir
-C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/cmake-build-debug-mingwarm/CMakeFiles/edit_cache.dir
-C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/cmake-build-debug-mingwarm/CMakeFiles/rebuild_cache.dir

@@ -104,7 +104,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/genta/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake"
   "C:/Users/genta/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Generic.cmake"
   "C:/Users/genta/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/share/cmake-3.28/Modules/ProcessorCount.cmake"
-  "C:/Users/genta/Desktop/balloon/balloon_main/CMakeLists.txt"
+  "C:/Users/genta/Desktop/ws2/balloon_main/CMakeLists.txt"
   "CMakeFiles/3.28.1/CMakeASMCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeCXXCompiler.cmake"

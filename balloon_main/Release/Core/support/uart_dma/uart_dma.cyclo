@@ -1,0 +1,6 @@
+../Core/support/uart_dma/uart_dma.c:116:1:usart_process_data	4
+../Core/support/uart_dma/uart_dma.c:59:1:usart_rx_check	4
+../Core/support/uart_dma/uart_dma.c:138:1:usart_send_string	1
+../Core/support/uart_dma/uart_dma.c:18:1:usart_rx_dma_thread	1
+../Core/support/uart_dma/uart_dma.c:151:1:usart_dma_irq_handler	5
+../Core/support/uart_dma/uart_dma.c:176:1:usart_irq_handler	3

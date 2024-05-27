@@ -56,10 +56,10 @@ RM = "C:\Users\genta\AppData\Local\Programs\CLion Nova\bin\cmake\win\x64\bin\cma
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\genta\Desktop\balloon\balloon_main
+CMAKE_SOURCE_DIR = C:\Users\genta\Desktop\ws2\balloon_main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\genta\Desktop\balloon\balloon_main\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\genta\Desktop\ws2\balloon_main\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\genta\Desktop\balloon\balloon_main\cmake-build-debug\CMakeFiles C:\Users\genta\Desktop\balloon\balloon_main\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\genta\Desktop\ws2\balloon_main\cmake-build-debug\CMakeFiles C:\Users\genta\Desktop\ws2\balloon_main\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\genta\Desktop\balloon\balloon_main\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\genta\Desktop\ws2\balloon_main\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,54 +128,6 @@ balloon_main.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/build
 .PHONY : balloon_main.elf/fast
 
-Core/Src/crc.obj: Core/Src/crc.c.obj
-.PHONY : Core/Src/crc.obj
-
-# target to build an object file
-Core/Src/crc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/crc.c.obj
-.PHONY : Core/Src/crc.c.obj
-
-Core/Src/crc.i: Core/Src/crc.c.i
-.PHONY : Core/Src/crc.i
-
-# target to preprocess a source file
-Core/Src/crc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/crc.c.i
-.PHONY : Core/Src/crc.c.i
-
-Core/Src/crc.s: Core/Src/crc.c.s
-.PHONY : Core/Src/crc.s
-
-# target to generate assembly for a file
-Core/Src/crc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/crc.c.s
-.PHONY : Core/Src/crc.c.s
-
-Core/Src/dma.obj: Core/Src/dma.c.obj
-.PHONY : Core/Src/dma.obj
-
-# target to build an object file
-Core/Src/dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/dma.c.obj
-.PHONY : Core/Src/dma.c.obj
-
-Core/Src/dma.i: Core/Src/dma.c.i
-.PHONY : Core/Src/dma.i
-
-# target to preprocess a source file
-Core/Src/dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/dma.c.i
-.PHONY : Core/Src/dma.c.i
-
-Core/Src/dma.s: Core/Src/dma.c.s
-.PHONY : Core/Src/dma.s
-
-# target to generate assembly for a file
-Core/Src/dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/dma.c.s
-.PHONY : Core/Src/dma.c.s
-
 Core/Src/freertos.obj: Core/Src/freertos.c.obj
 .PHONY : Core/Src/freertos.obj
 
@@ -200,78 +152,6 @@ Core/Src/freertos.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/freertos.c.s
 .PHONY : Core/Src/freertos.c.s
 
-Core/Src/gpio.obj: Core/Src/gpio.c.obj
-.PHONY : Core/Src/gpio.obj
-
-# target to build an object file
-Core/Src/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/gpio.c.obj
-.PHONY : Core/Src/gpio.c.obj
-
-Core/Src/gpio.i: Core/Src/gpio.c.i
-.PHONY : Core/Src/gpio.i
-
-# target to preprocess a source file
-Core/Src/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/gpio.c.i
-.PHONY : Core/Src/gpio.c.i
-
-Core/Src/gpio.s: Core/Src/gpio.c.s
-.PHONY : Core/Src/gpio.s
-
-# target to generate assembly for a file
-Core/Src/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/gpio.c.s
-.PHONY : Core/Src/gpio.c.s
-
-Core/Src/i2c.obj: Core/Src/i2c.c.obj
-.PHONY : Core/Src/i2c.obj
-
-# target to build an object file
-Core/Src/i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/i2c.c.obj
-.PHONY : Core/Src/i2c.c.obj
-
-Core/Src/i2c.i: Core/Src/i2c.c.i
-.PHONY : Core/Src/i2c.i
-
-# target to preprocess a source file
-Core/Src/i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/i2c.c.i
-.PHONY : Core/Src/i2c.c.i
-
-Core/Src/i2c.s: Core/Src/i2c.c.s
-.PHONY : Core/Src/i2c.s
-
-# target to generate assembly for a file
-Core/Src/i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/i2c.c.s
-.PHONY : Core/Src/i2c.c.s
-
-Core/Src/lptim.obj: Core/Src/lptim.c.obj
-.PHONY : Core/Src/lptim.obj
-
-# target to build an object file
-Core/Src/lptim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/lptim.c.obj
-.PHONY : Core/Src/lptim.c.obj
-
-Core/Src/lptim.i: Core/Src/lptim.c.i
-.PHONY : Core/Src/lptim.i
-
-# target to preprocess a source file
-Core/Src/lptim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/lptim.c.i
-.PHONY : Core/Src/lptim.c.i
-
-Core/Src/lptim.s: Core/Src/lptim.c.s
-.PHONY : Core/Src/lptim.s
-
-# target to generate assembly for a file
-Core/Src/lptim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/lptim.c.s
-.PHONY : Core/Src/lptim.c.s
-
 Core/Src/main.obj: Core/Src/main.c.obj
 .PHONY : Core/Src/main.obj
 
@@ -295,78 +175,6 @@ Core/Src/main.s: Core/Src/main.c.s
 Core/Src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/main.c.s
 .PHONY : Core/Src/main.c.s
-
-Core/Src/rtc.obj: Core/Src/rtc.c.obj
-.PHONY : Core/Src/rtc.obj
-
-# target to build an object file
-Core/Src/rtc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/rtc.c.obj
-.PHONY : Core/Src/rtc.c.obj
-
-Core/Src/rtc.i: Core/Src/rtc.c.i
-.PHONY : Core/Src/rtc.i
-
-# target to preprocess a source file
-Core/Src/rtc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/rtc.c.i
-.PHONY : Core/Src/rtc.c.i
-
-Core/Src/rtc.s: Core/Src/rtc.c.s
-.PHONY : Core/Src/rtc.s
-
-# target to generate assembly for a file
-Core/Src/rtc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/rtc.c.s
-.PHONY : Core/Src/rtc.c.s
-
-Core/Src/sdmmc.obj: Core/Src/sdmmc.c.obj
-.PHONY : Core/Src/sdmmc.obj
-
-# target to build an object file
-Core/Src/sdmmc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/sdmmc.c.obj
-.PHONY : Core/Src/sdmmc.c.obj
-
-Core/Src/sdmmc.i: Core/Src/sdmmc.c.i
-.PHONY : Core/Src/sdmmc.i
-
-# target to preprocess a source file
-Core/Src/sdmmc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/sdmmc.c.i
-.PHONY : Core/Src/sdmmc.c.i
-
-Core/Src/sdmmc.s: Core/Src/sdmmc.c.s
-.PHONY : Core/Src/sdmmc.s
-
-# target to generate assembly for a file
-Core/Src/sdmmc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/sdmmc.c.s
-.PHONY : Core/Src/sdmmc.c.s
-
-Core/Src/spi.obj: Core/Src/spi.c.obj
-.PHONY : Core/Src/spi.obj
-
-# target to build an object file
-Core/Src/spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/spi.c.obj
-.PHONY : Core/Src/spi.c.obj
-
-Core/Src/spi.i: Core/Src/spi.c.i
-.PHONY : Core/Src/spi.i
-
-# target to preprocess a source file
-Core/Src/spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/spi.c.i
-.PHONY : Core/Src/spi.c.i
-
-Core/Src/spi.s: Core/Src/spi.c.s
-.PHONY : Core/Src/spi.s
-
-# target to generate assembly for a file
-Core/Src/spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/spi.c.s
-.PHONY : Core/Src/spi.c.s
 
 Core/Src/stm32l4xx_hal_msp.obj: Core/Src/stm32l4xx_hal_msp.c.obj
 .PHONY : Core/Src/stm32l4xx_hal_msp.obj
@@ -512,54 +320,6 @@ Core/Src/system_stm32l4xx.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/system_stm32l4xx.c.s
 .PHONY : Core/Src/system_stm32l4xx.c.s
 
-Core/Src/tim.obj: Core/Src/tim.c.obj
-.PHONY : Core/Src/tim.obj
-
-# target to build an object file
-Core/Src/tim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/tim.c.obj
-.PHONY : Core/Src/tim.c.obj
-
-Core/Src/tim.i: Core/Src/tim.c.i
-.PHONY : Core/Src/tim.i
-
-# target to preprocess a source file
-Core/Src/tim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/tim.c.i
-.PHONY : Core/Src/tim.c.i
-
-Core/Src/tim.s: Core/Src/tim.c.s
-.PHONY : Core/Src/tim.s
-
-# target to generate assembly for a file
-Core/Src/tim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/tim.c.s
-.PHONY : Core/Src/tim.c.s
-
-Core/Src/usart.obj: Core/Src/usart.c.obj
-.PHONY : Core/Src/usart.obj
-
-# target to build an object file
-Core/Src/usart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/usart.c.obj
-.PHONY : Core/Src/usart.c.obj
-
-Core/Src/usart.i: Core/Src/usart.c.i
-.PHONY : Core/Src/usart.i
-
-# target to preprocess a source file
-Core/Src/usart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/usart.c.i
-.PHONY : Core/Src/usart.c.i
-
-Core/Src/usart.s: Core/Src/usart.c.s
-.PHONY : Core/Src/usart.s
-
-# target to generate assembly for a file
-Core/Src/usart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Src/usart.c.s
-.PHONY : Core/Src/usart.c.s
-
 Core/Startup/startup_stm32l431rbtx.obj: Core/Startup/startup_stm32l431rbtx.s.obj
 .PHONY : Core/Startup/startup_stm32l431rbtx.obj
 
@@ -568,77 +328,53 @@ Core/Startup/startup_stm32l431rbtx.s.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/Startup/startup_stm32l431rbtx.s.obj
 .PHONY : Core/Startup/startup_stm32l431rbtx.s.obj
 
-Core/tasks/gnss/gnss_task.obj: Core/tasks/gnss/gnss_task.c.obj
-.PHONY : Core/tasks/gnss/gnss_task.obj
+Core/device/power/power.obj: Core/device/power/power.c.obj
+.PHONY : Core/device/power/power.obj
 
 # target to build an object file
-Core/tasks/gnss/gnss_task.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/gnss/gnss_task.c.obj
-.PHONY : Core/tasks/gnss/gnss_task.c.obj
+Core/device/power/power.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/device/power/power.c.obj
+.PHONY : Core/device/power/power.c.obj
 
-Core/tasks/gnss/gnss_task.i: Core/tasks/gnss/gnss_task.c.i
-.PHONY : Core/tasks/gnss/gnss_task.i
+Core/device/power/power.i: Core/device/power/power.c.i
+.PHONY : Core/device/power/power.i
 
 # target to preprocess a source file
-Core/tasks/gnss/gnss_task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/gnss/gnss_task.c.i
-.PHONY : Core/tasks/gnss/gnss_task.c.i
+Core/device/power/power.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/device/power/power.c.i
+.PHONY : Core/device/power/power.c.i
 
-Core/tasks/gnss/gnss_task.s: Core/tasks/gnss/gnss_task.c.s
-.PHONY : Core/tasks/gnss/gnss_task.s
+Core/device/power/power.s: Core/device/power/power.c.s
+.PHONY : Core/device/power/power.s
 
 # target to generate assembly for a file
-Core/tasks/gnss/gnss_task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/gnss/gnss_task.c.s
-.PHONY : Core/tasks/gnss/gnss_task.c.s
+Core/device/power/power.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/device/power/power.c.s
+.PHONY : Core/device/power/power.c.s
 
-Core/tasks/imu/imu_task.obj: Core/tasks/imu/imu_task.c.obj
-.PHONY : Core/tasks/imu/imu_task.obj
+Core/support/uart_dma/uart_dma.obj: Core/support/uart_dma/uart_dma.c.obj
+.PHONY : Core/support/uart_dma/uart_dma.obj
 
 # target to build an object file
-Core/tasks/imu/imu_task.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/imu/imu_task.c.obj
-.PHONY : Core/tasks/imu/imu_task.c.obj
+Core/support/uart_dma/uart_dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/support/uart_dma/uart_dma.c.obj
+.PHONY : Core/support/uart_dma/uart_dma.c.obj
 
-Core/tasks/imu/imu_task.i: Core/tasks/imu/imu_task.c.i
-.PHONY : Core/tasks/imu/imu_task.i
-
-# target to preprocess a source file
-Core/tasks/imu/imu_task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/imu/imu_task.c.i
-.PHONY : Core/tasks/imu/imu_task.c.i
-
-Core/tasks/imu/imu_task.s: Core/tasks/imu/imu_task.c.s
-.PHONY : Core/tasks/imu/imu_task.s
-
-# target to generate assembly for a file
-Core/tasks/imu/imu_task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/imu/imu_task.c.s
-.PHONY : Core/tasks/imu/imu_task.c.s
-
-Core/tasks/time/time_task.obj: Core/tasks/time/time_task.c.obj
-.PHONY : Core/tasks/time/time_task.obj
-
-# target to build an object file
-Core/tasks/time/time_task.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/time/time_task.c.obj
-.PHONY : Core/tasks/time/time_task.c.obj
-
-Core/tasks/time/time_task.i: Core/tasks/time/time_task.c.i
-.PHONY : Core/tasks/time/time_task.i
+Core/support/uart_dma/uart_dma.i: Core/support/uart_dma/uart_dma.c.i
+.PHONY : Core/support/uart_dma/uart_dma.i
 
 # target to preprocess a source file
-Core/tasks/time/time_task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/time/time_task.c.i
-.PHONY : Core/tasks/time/time_task.c.i
+Core/support/uart_dma/uart_dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/support/uart_dma/uart_dma.c.i
+.PHONY : Core/support/uart_dma/uart_dma.c.i
 
-Core/tasks/time/time_task.s: Core/tasks/time/time_task.c.s
-.PHONY : Core/tasks/time/time_task.s
+Core/support/uart_dma/uart_dma.s: Core/support/uart_dma/uart_dma.c.s
+.PHONY : Core/support/uart_dma/uart_dma.s
 
 # target to generate assembly for a file
-Core/tasks/time/time_task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/tasks/time/time_task.c.s
-.PHONY : Core/tasks/time/time_task.c.s
+Core/support/uart_dma/uart_dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Core/support/uart_dma/uart_dma.c.s
+.PHONY : Core/support/uart_dma/uart_dma.c.s
 
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.obj: Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
 .PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.obj
@@ -1528,678 +1264,6 @@ FATFS/Target/sd_diskio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/FATFS/Target/sd_diskio.c.s
 .PHONY : FATFS/Target/sd_diskio.c.s
 
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c.s
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.obj: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.obj
-
-# target to build an object file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.obj
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.obj
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.i: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.i
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.i
-
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.s: Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\balloon_main.elf.dir\build.make CMakeFiles/balloon_main.elf.dir/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.s
-.PHONY : Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c.s
-
 Middlewares/Third_Party/FatFs/src/diskio.obj: Middlewares/Third_Party/FatFs/src/diskio.c.obj
 .PHONY : Middlewares/Third_Party/FatFs/src/diskio.obj
 
@@ -2545,36 +1609,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... balloon_main.elf
-	@echo ... Core/Src/crc.obj
-	@echo ... Core/Src/crc.i
-	@echo ... Core/Src/crc.s
-	@echo ... Core/Src/dma.obj
-	@echo ... Core/Src/dma.i
-	@echo ... Core/Src/dma.s
 	@echo ... Core/Src/freertos.obj
 	@echo ... Core/Src/freertos.i
 	@echo ... Core/Src/freertos.s
-	@echo ... Core/Src/gpio.obj
-	@echo ... Core/Src/gpio.i
-	@echo ... Core/Src/gpio.s
-	@echo ... Core/Src/i2c.obj
-	@echo ... Core/Src/i2c.i
-	@echo ... Core/Src/i2c.s
-	@echo ... Core/Src/lptim.obj
-	@echo ... Core/Src/lptim.i
-	@echo ... Core/Src/lptim.s
 	@echo ... Core/Src/main.obj
 	@echo ... Core/Src/main.i
 	@echo ... Core/Src/main.s
-	@echo ... Core/Src/rtc.obj
-	@echo ... Core/Src/rtc.i
-	@echo ... Core/Src/rtc.s
-	@echo ... Core/Src/sdmmc.obj
-	@echo ... Core/Src/sdmmc.i
-	@echo ... Core/Src/sdmmc.s
-	@echo ... Core/Src/spi.obj
-	@echo ... Core/Src/spi.i
-	@echo ... Core/Src/spi.s
 	@echo ... Core/Src/stm32l4xx_hal_msp.obj
 	@echo ... Core/Src/stm32l4xx_hal_msp.i
 	@echo ... Core/Src/stm32l4xx_hal_msp.s
@@ -2593,22 +1633,13 @@ help:
 	@echo ... Core/Src/system_stm32l4xx.obj
 	@echo ... Core/Src/system_stm32l4xx.i
 	@echo ... Core/Src/system_stm32l4xx.s
-	@echo ... Core/Src/tim.obj
-	@echo ... Core/Src/tim.i
-	@echo ... Core/Src/tim.s
-	@echo ... Core/Src/usart.obj
-	@echo ... Core/Src/usart.i
-	@echo ... Core/Src/usart.s
 	@echo ... Core/Startup/startup_stm32l431rbtx.obj
-	@echo ... Core/tasks/gnss/gnss_task.obj
-	@echo ... Core/tasks/gnss/gnss_task.i
-	@echo ... Core/tasks/gnss/gnss_task.s
-	@echo ... Core/tasks/imu/imu_task.obj
-	@echo ... Core/tasks/imu/imu_task.i
-	@echo ... Core/tasks/imu/imu_task.s
-	@echo ... Core/tasks/time/time_task.obj
-	@echo ... Core/tasks/time/time_task.i
-	@echo ... Core/tasks/time/time_task.s
+	@echo ... Core/device/power/power.obj
+	@echo ... Core/device/power/power.i
+	@echo ... Core/device/power/power.s
+	@echo ... Core/support/uart_dma/uart_dma.obj
+	@echo ... Core/support/uart_dma/uart_dma.i
+	@echo ... Core/support/uart_dma/uart_dma.s
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.obj
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.i
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.s
@@ -2720,90 +1751,6 @@ help:
 	@echo ... FATFS/Target/sd_diskio.obj
 	@echo ... FATFS/Target/sd_diskio.i
 	@echo ... FATFS/Target/sd_diskio.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTables.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/CommonTables/CommonTablesF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.s
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.obj
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.i
-	@echo ... Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.s
 	@echo ... Middlewares/Third_Party/FatFs/src/diskio.obj
 	@echo ... Middlewares/Third_Party/FatFs/src/diskio.i
 	@echo ... Middlewares/Third_Party/FatFs/src/diskio.s

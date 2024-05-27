@@ -1,0 +1,15 @@
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usart.h:3119:26:LL_USART_IsActiveFlag_IDLE	2
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usart.h:3159:26:LL_USART_IsActiveFlag_TC	2
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usart.h:3187:26:LL_USART_IsActiveFlag_TXE	2
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usart.h:3496:22:LL_USART_ClearFlag_IDLE	1
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usart.h:4150:26:LL_USART_IsEnabledIT_IDLE	2
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usart.h:4566:22:LL_USART_TransmitData8	1
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:1019:26:LL_DMA_GetDataLength	1
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:2346:26:LL_DMA_IsEnabledIT_TC	2
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:2367:26:LL_DMA_IsEnabledIT_HT	2
+../Core/support/uart_dma/uart_dma.c:18:1:usart_rx_dma_thread	1
+../Core/support/uart_dma/uart_dma.c:59:1:usart_rx_check	4
+../Core/support/uart_dma/uart_dma.c:116:1:usart_process_data	4
+../Core/support/uart_dma/uart_dma.c:138:1:usart_send_string	1
+../Core/support/uart_dma/uart_dma.c:151:1:usart_dma_irq_handler	5
+../Core/support/uart_dma/uart_dma.c:176:1:usart_irq_handler	3
