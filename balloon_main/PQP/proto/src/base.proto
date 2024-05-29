@@ -1,0 +1,27 @@
+// [START declaration]
+syntax = "proto3";
+package pqp;
+import "google/protobuf/timestamp.proto";
+
+enum HardResult {
+  SUCCESS = 0;
+  INVALID_ARGUMENT = 1;
+  HARDWARE_TIMEOUT = 2;
+  HARDWARE_INVALID = 3;
+}
+
+
+
+message Header {
+  uint32 device_id = 1;
+  google.protobuf.Timestamp timestamp = 2;
+}
+
+message CommandResultTelemetry {
+  Header header = 1;
+  HardResult result = 2;
+}
+
+message DefaultArgument {
+  Header header = 1;
+}

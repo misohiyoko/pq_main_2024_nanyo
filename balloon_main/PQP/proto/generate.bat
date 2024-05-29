@@ -1,0 +1,1 @@
+protoc --cpp_out=gen src/base.proto src/gnss.proto src/power.proto

@@ -1,0 +1,39 @@
+
+// [START declaration]
+syntax = "proto3";
+package pqp;
+import "src/base.proto";
+
+service PowerService {
+  rpc SetMode (SetPowerModeCommand) returns (CommandResultTelemetry);
+  rpc Shutdown (DefaultArgument) returns (CommandResultTelemetry);
+}
+
+enum PowerSystem {
+  SENSOR = 0;
+  COMMUNICATION = 1;
+}
+
+enum PowerMode {
+  ON = 0;
+  OFF = 1;
+}
+
+
+message SetPowerModeCommand {
+  Header header = 1;
+  PowerSystem powerSystem = 2;
+  PowerMode powerMode = 3;
+}
+
+message PowerState {
+  message SystemState {
+    PowerSystem system = 1;
+    PowerMode mode = 2;
+  }
+  Header header = 1;
+  repeated SystemState states = 2;
+}
+
+
+
