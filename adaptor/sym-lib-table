@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "balloon_lib")(type "KiCad")(uri "C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_lib.kicad_sym")(options "")(descr ""))
+)
