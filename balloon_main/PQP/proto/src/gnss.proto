@@ -1,0 +1,49 @@
+
+// [START declaration]
+syntax = "proto3";
+package pqp;
+import "src/base.proto";
+
+service GnssService {
+  rpc SetConfigHex(SetGnssConfigHexCommand) returns (CommandResultTelemetry);
+  rpc SetUartSpeed(SetUartSpeedCommand) returns (CommandResultTelemetry);
+}
+
+message SetGnssConfigHexCommand {
+  Header header = 1;
+  bytes hexConfig = 2;
+}
+
+message SetUartSpeedCommand {
+  Header header = 1;
+  uint32 speed = 2;
+}
+
+message Satellite {
+  enum SatelliteType {
+    GPS = 0;
+    BDS = 1;
+    GLONASS = 2;
+    QZSS = 3;
+    SBAS = 4;
+    GALILEO = 5;
+  }
+  SatelliteType type = 1;
+  uint32 number = 2;
+  bool used_in_navigation = 3;
+  bool is_tracked = 4;
+}
+
+message GnssState {
+  message Coordinate {
+    double latitude = 1;
+    double longitude = 2;
+  }
+  Header header = 1;
+  Coordinate coordinate = 2;
+  float accuracy_2d = 3;
+  float altitude = 4;
+  float accuracy_3d = 5;
+  uint32 tracking_satellites_num = 6;
+  repeated Satellite satellites = 7;
+}
