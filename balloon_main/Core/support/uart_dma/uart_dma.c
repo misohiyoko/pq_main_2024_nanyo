@@ -6,6 +6,7 @@
  */
 
 #include <string.h>
+#include <stdio.h>
 #include "uart_dma.h"
 
 
@@ -19,17 +20,14 @@ usart_rx_dma_thread(void* arg) {
     uart_desc_t* uart = arg;
     void* d;
 
-    /* Notify user to start sending data */
-    usart_send_string(uart, "USART DMA example: DMA HT & TC + USART IDLE LINE IRQ + RTOS processing\r\n");
-    usart_send_string(uart, "Start sending data to STM32\r\n");
 
     while (1) {
         /* Block thread and wait for event to process USART data */
         osMessageQueueGet(uart->data->queue, &d, NULL, osWaitForever);
-
+        uint8_t a = 0;
         /* Simply call processing function */
-        usart_rx_check(uart);
-
+        a = usart_rx_check(uart);
+        printf("uart:%d\r\n", a);
         (void)d;
     }
 }
@@ -55,7 +53,7 @@ usart_rx_dma_thread(void* arg) {
  * - Improve architecture design to achieve faster reads
  * - Increase raw buffer size and allow DMA to write more data before this function is called
  */
-void
+uint8_t
 usart_rx_check(const uart_desc_t* uart) {
     size_t pos;
 
@@ -79,7 +77,7 @@ usart_rx_check(const uart_desc_t* uart) {
              * [   7   ]
              * [ N - 1 ]
              */
-            usart_process_data(uart, &uart->data->dma_rx_buffer[uart->data->old_pos], pos - uart->data->old_pos);
+            return uart->data->dma_rx_buffer[uart->data->old_pos];
         } else {
             /*
              * Processing is done in "overflow" mode..
@@ -97,13 +95,15 @@ usart_rx_check(const uart_desc_t* uart) {
              * [   7   ]            |                                 |
              * [ N - 1 ]            |---------------------------------|
              */
-            usart_process_data(uart, &uart->data->dma_rx_buffer[uart->data->old_pos], ARRAY_LEN(uart->data->dma_rx_buffer) - uart->data->old_pos);
+            return uart->data->dma_rx_buffer[uart->data->old_pos];
             if (pos > 0) {
-                usart_process_data(uart, &uart->data->dma_rx_buffer[0], pos);
+                return uart->data->dma_rx_buffer[0];
             }
         }
         uart->data->old_pos = pos;              /* Save current position as old for next transfers */
     }
+    return 0;
+
 }
 
 /**
@@ -112,23 +112,6 @@ usart_rx_check(const uart_desc_t* uart) {
  * \param[in]       data: Data to process
  * \param[in]       len: Length in units of bytes
  */
-void
-usart_process_data(const uart_desc_t* uart, const void* data, size_t len) {
-    const uint8_t* d = data;
-
-    /*
-     * This function is called on DMA TC or HT events, and on UART IDLE (if enabled) event.
-     *
-     * For the sake of this example, function does a loop-back data over UART in polling mode.
-     * Check ringbuff RX-based example for implementation with TX & RX DMA transfer.
-     */
-
-    for (; len > 0; --len, ++d) {
-        LL_USART_TransmitData8(uart->uart, *d);
-        while (!LL_USART_IsActiveFlag_TXE(uart->uart)) {}
-    }
-    while (!LL_USART_IsActiveFlag_TC(uart->uart)) {}
-}
 
 /**
  * \brief           Send string to USART

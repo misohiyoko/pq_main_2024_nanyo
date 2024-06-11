@@ -53,7 +53,7 @@ include_directories(Core/Inc "${workspace_loc}/${ProjName}/Core/support" Drivers
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32L431xx -DUSE_FULL_LL_DRIVER)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "FATFS/*.*" "Middlewares/*.*" "Drivers/*.*")
+file(GLOB_RECURSE SOURCES "Core/*.*" "CMSIS/*.*" "FATFS/*.*" "Middlewares/*.*" "Drivers/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32L431RBTX_FLASH.ld)
 

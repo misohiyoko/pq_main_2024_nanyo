@@ -49,7 +49,7 @@ Core/Src/stm32l4xx_it.o: ../Core/Src/stm32l4xx_it.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h \
  ../Core/Inc/stm32l4xx_it.h \
- C:/Users/genta/Desktop/ws2/balloon_main/Core/support/uart_dma/uart_dma.h \
+ C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/uart_dma/uart_dma.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
@@ -118,7 +118,7 @@ Core/Src/stm32l4xx_it.o: ../Core/Src/stm32l4xx_it.c ../Core/Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h:
 ../Core/Inc/stm32l4xx_it.h:
-C:/Users/genta/Desktop/ws2/balloon_main/Core/support/uart_dma/uart_dma.h:
+C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/uart_dma/uart_dma.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:

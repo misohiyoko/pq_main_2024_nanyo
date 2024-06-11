@@ -42,7 +42,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-extern uart_desc_t uart1_desc;
+extern uart_desc_t uart3_desc;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -189,7 +189,7 @@ void DMA1_Channel2_IRQHandler(void)
 void DMA1_Channel3_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Channel3_IRQn 0 */
-
+	usart_dma_irq_handler(&uart3_desc);
   /* USER CODE END DMA1_Channel3_IRQn 0 */
   HAL_DMA_IRQHandler(&hdma_usart3_rx);
   /* USER CODE BEGIN DMA1_Channel3_IRQn 1 */
@@ -217,7 +217,7 @@ void DMA1_Channel4_IRQHandler(void)
 void DMA1_Channel5_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Channel5_IRQn 0 */
-    usart_dma_irq_handler(&uart1_desc);
+
   /* USER CODE END DMA1_Channel5_IRQn 0 */
 
   /* USER CODE BEGIN DMA1_Channel5_IRQn 1 */
@@ -276,7 +276,7 @@ void USART1_IRQHandler(void)
 
   /* USER CODE END USART1_IRQn 0 */
   /* USER CODE BEGIN USART1_IRQn 1 */
-    usart_irq_handler(&uart1_desc);
+
   /* USER CODE END USART1_IRQn 1 */
 }
 
@@ -303,7 +303,7 @@ void USART3_IRQHandler(void)
   /* USER CODE END USART3_IRQn 0 */
   HAL_UART_IRQHandler(&huart3);
   /* USER CODE BEGIN USART3_IRQn 1 */
-
+  usart_irq_handler(&uart3_desc);
   /* USER CODE END USART3_IRQn 1 */
 }
 

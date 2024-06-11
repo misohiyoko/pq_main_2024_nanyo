@@ -25,6 +25,8 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include "uart_dma/uart_dma.h"
+#include "neopixel/ARGB.h"
+#include "sd/sd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,7 +106,7 @@ void StartMainTask(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-DECLARE_UART_DMA_DESC(1,1,5)
+DECLARE_UART_DMA_DESC(3,1,3)
 /* USER CODE END 0 */
 
 /**
@@ -132,7 +134,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-  INIT_UART_DMA_DESC(1,1,5)
+  INIT_UART_DMA_DESC(3,1,3)
 
 
   /* USER CODE END SysInit */
@@ -155,6 +157,9 @@ int main(void)
   MX_FATFS_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
+  ARGB_Init();  // Initialization
+  ARGB_FillRGB(200, 0, 0);
+  while (!ARGB_Show());
   HAL_GPIO_WritePin(CTRL_SENSE_GPIO_Port, CTRL_SENSE_Pin, GPIO_PIN_RESET);
 
   HAL_GPIO_WritePin(CTRL_SENSE_GPIO_Port, CTRL_SENSE_Pin, GPIO_PIN_SET);
@@ -186,7 +191,7 @@ int main(void)
   mainTaskHandle = osThreadNew(StartMainTask, NULL, &mainTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  START_UART_DMA(1)
+  START_UART_DMA(3)
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
@@ -689,12 +694,12 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 0;
+  htim1.Init.Prescaler = 2;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 65535;
+  htim1.Init.Period = 32;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
-  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
   {
     Error_Handler();
@@ -704,25 +709,25 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
-  if (HAL_TIM_OC_Init(&htim1) != HAL_OK)
+  if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
   {
     Error_Handler();
   }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_OC1REF;
   sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_ENABLE;
   if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
-  sConfigOC.OCMode = TIM_OCMODE_TIMING;
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
   sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
-  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  sConfigOC.OCFastMode = TIM_OCFAST_ENABLE;
   sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
   sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
-  if (HAL_TIM_OC_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
   {
     Error_Handler();
   }
@@ -1104,6 +1109,11 @@ int _write(int file, char *ptr, int len)
   }
   return len;
 }
+void HAL_Delay(uint32_t Delay)
+{
+    osDelay(Delay);
+}
+
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartMainTask */
@@ -1119,7 +1129,8 @@ void StartMainTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      printf("Hello World!!\r\n");
+    osDelay(1000);
   }
   /* USER CODE END 5 */
 }

@@ -64,7 +64,7 @@ typedef struct {
 
 
 
-void usart_rx_check(const uart_desc_t* uart);
+uint8_t usart_rx_check(const uart_desc_t* uart);
 void usart_process_data(const uart_desc_t* uart, const void* data, size_t len);
 void usart_send_string(const uart_desc_t* uart, const char* str);
 void usart_dma_irq_handler(const uart_desc_t* uart);

@@ -65,7 +65,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/sd_diskio.h \
- C:/Users/genta/Desktop/ws2/balloon_main/Core/support/uart_dma/uart_dma.h
+ C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/uart_dma/uart_dma.h \
+ C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/neopixel/ARGB.h \
+ C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/neopixel/libs.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -137,4 +139,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FatFs/src/diskio.h:
 ../Middlewares/Third_Party/FatFs/src/ff.h:
 ../FATFS/Target/sd_diskio.h:
-C:/Users/genta/Desktop/ws2/balloon_main/Core/support/uart_dma/uart_dma.h:
+C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/uart_dma/uart_dma.h:
+C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/neopixel/ARGB.h:
+C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/neopixel/libs.h:

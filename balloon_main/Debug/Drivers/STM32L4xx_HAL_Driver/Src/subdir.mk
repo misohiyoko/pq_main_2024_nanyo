@@ -41,43 +41,6 @@ C_SRCS += \
 ../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c \
 ../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c 
 
-OBJS += \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_lptim.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rtc.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rtc_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sd.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sd_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.o \
-./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.o 
-
 C_DEPS += \
 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.d \
 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.d \
@@ -115,10 +78,47 @@ C_DEPS += \
 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.d \
 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.d 
 
+OBJS += \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_lptim.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rtc.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rtc_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sd.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sd_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.o \
+./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.o 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Drivers/STM32L4xx_HAL_Driver/Src/%.o Drivers/STM32L4xx_HAL_Driver/Src/%.su Drivers/STM32L4xx_HAL_Driver/Src/%.cyclo: ../Drivers/STM32L4xx_HAL_Driver/Src/%.c Drivers/STM32L4xx_HAL_Driver/Src/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L431xx -DUSE_FULL_LL_DRIVER -c -I../Core/Inc -I"C:/Users/genta/Desktop/ws2/balloon_main/Core/support" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../FATFS/Target -I../FATFS/App -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L431xx -DUSE_FULL_LL_DRIVER -c -I../Core/Inc -I"C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../FATFS/Target -I../FATFS/App -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Drivers-2f-STM32L4xx_HAL_Driver-2f-Src
 
