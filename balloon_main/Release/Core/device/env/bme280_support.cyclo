@@ -1,0 +1,8 @@
+../Core/device/env/bme280_support.c:305:4:BME280_I2C_bus_read	1
+../Core/device/env/bme280_support.c:388:6:BME280_delay_msek	1
+../Core/device/env/bme280_support.c:319:4:BME280_SPI_bus_read	2
+../Core/device/env/bme280_support.c:356:4:BME280_SPI_bus_write	3
+../Core/device/env/bme280_support.c:292:4:BME280_I2C_bus_write	1
+../Core/device/env/bme280_support.c:230:4:I2C_routine	1
+../Core/device/env/bme280_support.c:250:4:SPI_routine	1
+../Core/device/env/bme280_support.c:66:5:bme280_data_readout_template	1

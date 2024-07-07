@@ -1,0 +1,14 @@
+../Core/support/neopixel/ARGB.c:402:13:HSV2RGB.part.0	48	static
+../Core/support/neopixel/ARGB.c:527:13:ARGB_TIM_DMADelayPulseHalfCplt	24	static
+../Core/support/neopixel/ARGB.c:443:13:ARGB_TIM_DMADelayPulseCplt	32	static
+../Core/support/neopixel/ARGB.c:131:6:ARGB_Init	24	static
+../Core/support/neopixel/ARGB.c:189:6:ARGB_SetBrightness	0	static
+../Core/support/neopixel/ARGB.c:200:6:ARGB_SetRGB	16	static
+../Core/support/neopixel/ARGB.c:243:6:ARGB_SetHSV	32	static
+../Core/support/neopixel/ARGB.c:254:6:ARGB_SetWhite	0	static
+../Core/support/neopixel/ARGB.c:268:6:ARGB_FillRGB	32	static
+../Core/support/neopixel/ARGB.c:279:6:ARGB_FillHSV	24	static
+../Core/support/neopixel/ARGB.c:289:6:ARGB_FillWhite	16	static
+../Core/support/neopixel/ARGB.c:178:6:ARGB_Clear	8	static
+../Core/support/neopixel/ARGB.c:299:12:ARGB_Ready	0	static
+../Core/support/neopixel/ARGB.c:308:12:ARGB_Show	32	static

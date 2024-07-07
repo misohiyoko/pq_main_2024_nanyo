@@ -1,0 +1,2 @@
+../Core/device/lora/lora.c:12:5:lora_init	3
+../Core/device/lora/lora.c:28:5:lora_send	2

@@ -1,0 +1,2 @@
+../Core/device/sd/sd.c:20:5:init_sd	8
+../Core/device/sd/sd.c:48:5:write_line	1

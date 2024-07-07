@@ -1,6 +1,0 @@
-../Core/support/uart_dma/uart_dma.c:116:1:usart_process_data	0	static
-../Core/support/uart_dma/uart_dma.c:59:1:usart_rx_check	16	static
-../Core/support/uart_dma/uart_dma.c:138:1:usart_send_string	16	static
-../Core/support/uart_dma/uart_dma.c:18:1:usart_rx_dma_thread	16	static
-../Core/support/uart_dma/uart_dma.c:151:1:usart_dma_irq_handler	24	static
-../Core/support/uart_dma/uart_dma.c:176:1:usart_irq_handler	16	static
