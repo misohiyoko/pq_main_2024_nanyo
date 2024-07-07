@@ -29,18 +29,6 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l4xx_hal.h"
 
-#include "stm32l4xx_ll_usart.h"
-#include "stm32l4xx_ll_rcc.h"
-#include "stm32l4xx_ll_bus.h"
-#include "stm32l4xx_ll_cortex.h"
-#include "stm32l4xx_ll_system.h"
-#include "stm32l4xx_ll_utils.h"
-#include "stm32l4xx_ll_pwr.h"
-#include "stm32l4xx_ll_gpio.h"
-#include "stm32l4xx_ll_dma.h"
-
-#include "stm32l4xx_ll_exti.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -77,14 +65,16 @@ void Error_Handler(void);
 #define GPS_INT_GPIO_Port GPIOC
 #define GPS_RESET_Pin GPIO_PIN_3
 #define GPS_RESET_GPIO_Port GPIOC
+#define SPI1_Cs_Pin GPIO_PIN_4
+#define SPI1_Cs_GPIO_Port GPIOA
 #define CTRL_SENSE_Pin GPIO_PIN_5
 #define CTRL_SENSE_GPIO_Port GPIOA
 #define CTRL_COMM_Pin GPIO_PIN_6
 #define CTRL_COMM_GPIO_Port GPIOA
 #define GPS_SAFE_Pin GPIO_PIN_6
 #define GPS_SAFE_GPIO_Port GPIOC
-#define RM92A_RESEST_Pin GPIO_PIN_7
-#define RM92A_RESEST_GPIO_Port GPIOC
+#define RM92A_RESET_Pin GPIO_PIN_7
+#define RM92A_RESET_GPIO_Port GPIOC
 #define BNO055_RESET_Pin GPIO_PIN_8
 #define BNO055_RESET_GPIO_Port GPIOB
 

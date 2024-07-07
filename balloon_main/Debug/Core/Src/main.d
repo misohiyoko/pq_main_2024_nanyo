@@ -38,16 +38,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usart.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_rcc.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_bus.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_cortex.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_system.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_utils.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_gpio.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
@@ -61,13 +51,24 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../FATFS/App/fatfs.h ../Middlewares/Third_Party/FatFs/src/ff.h \
  ../Middlewares/Third_Party/FatFs/src/integer.h ../FATFS/Target/ffconf.h \
- ../FATFS/Target/bsp_driver_sd.h ../FATFS/Target/fatfs_platform.h \
+ ../FATFS/Target/bsp_driver_sd.h \
  ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/sd_diskio.h \
- C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/uart_dma/uart_dma.h \
- C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/neopixel/ARGB.h \
- C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/neopixel/libs.h
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/support/neopixel/ARGB.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/support/neopixel/libs.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/sd/sd.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/power/power.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/gnss/gnss.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/gnss/minmea.h \
+ ../Core/Inc/misc.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/env/env.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/env/bme280.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/env/bme280_support.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/env/bme280.h \
+ /Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/lora/lora.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -108,16 +109,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usart.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_rcc.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_bus.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_cortex.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_system.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_utils.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_gpio.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
@@ -134,11 +125,21 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FatFs/src/integer.h:
 ../FATFS/Target/ffconf.h:
 ../FATFS/Target/bsp_driver_sd.h:
-../FATFS/Target/fatfs_platform.h:
 ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
 ../Middlewares/Third_Party/FatFs/src/diskio.h:
 ../Middlewares/Third_Party/FatFs/src/ff.h:
 ../FATFS/Target/sd_diskio.h:
-C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/uart_dma/uart_dma.h:
-C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/neopixel/ARGB.h:
-C:/Users/genta/STM32CubeIDE/workspace_1.14.0/ws2/balloon_2024_nanyo/balloon_main/Core/support/neopixel/libs.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/support/neopixel/ARGB.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/support/neopixel/libs.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/sd/sd.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/power/power.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/gnss/gnss.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/gnss/minmea.h:
+../Core/Inc/misc.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/env/env.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/env/bme280.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/env/bme280_support.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/env/bme280.h:
+/Users/genta/pq_main_2024_nanyo/balloon_main/Core/device/lora/lora.h:

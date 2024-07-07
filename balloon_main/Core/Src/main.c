@@ -24,9 +24,14 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
-#include "uart_dma/uart_dma.h"
 #include "neopixel/ARGB.h"
 #include "sd/sd.h"
+#include "power/power.h"
+#include "queue.h"
+#include "gnss/gnss.h"
+#include "misc.h"
+#include "env/env.h"
+#include "lora/lora.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -36,7 +41,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define SDMMC_DATATIMEOUT 5000
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -58,8 +63,7 @@ LPTIM_HandleTypeDef hlptim2;
 RTC_HandleTypeDef hrtc;
 
 SD_HandleTypeDef hsd1;
-DMA_HandleTypeDef hdma_sdmmc1_rx;
-DMA_HandleTypeDef hdma_sdmmc1_tx;
+DMA_HandleTypeDef hdma_sdmmc1;
 
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
@@ -67,7 +71,11 @@ SPI_HandleTypeDef hspi2;
 TIM_HandleTypeDef htim1;
 DMA_HandleTypeDef hdma_tim1_ch1;
 
+UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
+DMA_HandleTypeDef hdma_usart1_rx;
+DMA_HandleTypeDef hdma_usart1_tx;
 DMA_HandleTypeDef hdma_usart3_rx;
 
 /* Definitions for mainTask */
@@ -77,8 +85,41 @@ const osThreadAttr_t mainTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
+/* Definitions for saveFile */
+osThreadId_t saveFileHandle;
+const osThreadAttr_t saveFile_attributes = {
+  .name = "saveFile",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for downLink */
+osThreadId_t downLinkHandle;
+const osThreadAttr_t downLink_attributes = {
+  .name = "downLink",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for messageHandlerQueue1 */
+osMessageQueueId_t messageHandlerQueue1Handle;
+const osMessageQueueAttr_t messageHandlerQueue1_attributes = {
+  .name = "messageHandlerQueue1"
+};
+/* Definitions for messageHandlerQueue2 */
+osMessageQueueId_t messageHandlerQueue2Handle;
+const osMessageQueueAttr_t messageHandlerQueue2_attributes = {
+  .name = "messageHandlerQueue2"
+};
+/* Definitions for messageHandlerQueue3 */
+osMessageQueueId_t messageHandlerQueue3Handle;
+const osMessageQueueAttr_t messageHandlerQueue3_attributes = {
+  .name = "messageHandlerQueue3"
+};
 /* USER CODE BEGIN PV */
-
+uint8_t byte_uart_1;
+uint8_t byte_uart_2;
+uint8_t byte_uart_3;
+extern gnss_data_t gnss_data;
+extern env_data_t env_data;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -93,12 +134,14 @@ static void MX_CRC_Init(void);
 static void MX_LPTIM2_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_I2C3_Init(void);
-static void MX_USART2_UART_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_USART3_UART_Init(void);
+static void MX_USART2_UART_Init(void);
 void StartMainTask(void *argument);
+void SaveFile(void *argument);
+void DownLink(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -106,7 +149,7 @@ void StartMainTask(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-DECLARE_UART_DMA_DESC(3,1,3)
+
 /* USER CODE END 0 */
 
 /**
@@ -134,7 +177,6 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-  INIT_UART_DMA_DESC(3,1,3)
 
 
   /* USER CODE END SysInit */
@@ -150,19 +192,18 @@ int main(void)
   MX_LPTIM2_Init();
   MX_I2C2_Init();
   MX_I2C3_Init();
-  MX_USART2_UART_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_TIM1_Init();
   MX_FATFS_Init();
   MX_USART3_UART_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   ARGB_Init();  // Initialization
   ARGB_FillRGB(200, 0, 0);
   while (!ARGB_Show());
-  HAL_GPIO_WritePin(CTRL_SENSE_GPIO_Port, CTRL_SENSE_Pin, GPIO_PIN_RESET);
+  reset_sense_power();
 
-  HAL_GPIO_WritePin(CTRL_SENSE_GPIO_Port, CTRL_SENSE_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPS_RESET_GPIO_Port, GPS_RESET_Pin, GPIO_PIN_SET);
   printf("Hello World!!\r\n");
   /* USER CODE END 2 */
@@ -182,6 +223,16 @@ int main(void)
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
+  /* Create the queue(s) */
+  /* creation of messageHandlerQueue1 */
+  messageHandlerQueue1Handle = osMessageQueueNew (64, sizeof(uint8_t), &messageHandlerQueue1_attributes);
+
+  /* creation of messageHandlerQueue2 */
+  messageHandlerQueue2Handle = osMessageQueueNew (64, sizeof(uint8_t), &messageHandlerQueue2_attributes);
+
+  /* creation of messageHandlerQueue3 */
+  messageHandlerQueue3Handle = osMessageQueueNew (64, sizeof(uint8_t), &messageHandlerQueue3_attributes);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
@@ -190,8 +241,14 @@ int main(void)
   /* creation of mainTask */
   mainTaskHandle = osThreadNew(StartMainTask, NULL, &mainTask_attributes);
 
+  /* creation of saveFile */
+  saveFileHandle = osThreadNew(SaveFile, NULL, &saveFile_attributes);
+
+  /* creation of downLink */
+  downLinkHandle = osThreadNew(DownLink, NULL, &downLink_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
-  START_UART_DMA(3)
+
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
@@ -584,9 +641,9 @@ static void MX_SDMMC1_SD_Init(void)
   hsd1.Init.ClockEdge = SDMMC_CLOCK_EDGE_RISING;
   hsd1.Init.ClockBypass = SDMMC_CLOCK_BYPASS_DISABLE;
   hsd1.Init.ClockPowerSave = SDMMC_CLOCK_POWER_SAVE_DISABLE;
-  hsd1.Init.BusWide = SDMMC_BUS_WIDE_4B;
+  hsd1.Init.BusWide = SDMMC_BUS_WIDE_1B;
   hsd1.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
-  hsd1.Init.ClockDiv = 0;
+  hsd1.Init.ClockDiv = 128;
   /* USER CODE BEGIN SDMMC1_Init 2 */
 
   /* USER CODE END SDMMC1_Init 2 */
@@ -612,17 +669,17 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
-  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi1.Init.NSS = SPI_NSS_HARD_OUTPUT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
+  hspi1.Init.CLKPhase = SPI_PHASE_2EDGE;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
   hspi1.Init.CRCPolynomial = 7;
   hspi1.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
-  hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  hspi1.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
   if (HAL_SPI_Init(&hspi1) != HAL_OK)
   {
     Error_Handler();
@@ -765,91 +822,23 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 0 */
 
-  LL_USART_InitTypeDef USART_InitStruct = {0};
-
-  LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
-
-  /** Initializes the peripherals clock
-  */
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1;
-  PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /* Peripheral clock enable */
-  LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_USART1);
-
-  LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOA);
-  /**USART1 GPIO Configuration
-  PA9   ------> USART1_TX
-  PA10   ------> USART1_RX
-  PA11   ------> USART1_CTS
-  PA12   ------> USART1_RTS
-  */
-  GPIO_InitStruct.Pin = LL_GPIO_PIN_9|LL_GPIO_PIN_10|LL_GPIO_PIN_11|LL_GPIO_PIN_12;
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
-  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  GPIO_InitStruct.Alternate = LL_GPIO_AF_7;
-  LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /* USART1 DMA Init */
-
-  /* USART1_RX Init */
-  LL_DMA_SetPeriphRequest(DMA1, LL_DMA_CHANNEL_5, LL_DMA_REQUEST_2);
-
-  LL_DMA_SetDataTransferDirection(DMA1, LL_DMA_CHANNEL_5, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
-
-  LL_DMA_SetChannelPriorityLevel(DMA1, LL_DMA_CHANNEL_5, LL_DMA_PRIORITY_LOW);
-
-  LL_DMA_SetMode(DMA1, LL_DMA_CHANNEL_5, LL_DMA_MODE_NORMAL);
-
-  LL_DMA_SetPeriphIncMode(DMA1, LL_DMA_CHANNEL_5, LL_DMA_PERIPH_NOINCREMENT);
-
-  LL_DMA_SetMemoryIncMode(DMA1, LL_DMA_CHANNEL_5, LL_DMA_MEMORY_INCREMENT);
-
-  LL_DMA_SetPeriphSize(DMA1, LL_DMA_CHANNEL_5, LL_DMA_PDATAALIGN_BYTE);
-
-  LL_DMA_SetMemorySize(DMA1, LL_DMA_CHANNEL_5, LL_DMA_MDATAALIGN_BYTE);
-
-  /* USART1_TX Init */
-  LL_DMA_SetPeriphRequest(DMA1, LL_DMA_CHANNEL_4, LL_DMA_REQUEST_2);
-
-  LL_DMA_SetDataTransferDirection(DMA1, LL_DMA_CHANNEL_4, LL_DMA_DIRECTION_MEMORY_TO_PERIPH);
-
-  LL_DMA_SetChannelPriorityLevel(DMA1, LL_DMA_CHANNEL_4, LL_DMA_PRIORITY_LOW);
-
-  LL_DMA_SetMode(DMA1, LL_DMA_CHANNEL_4, LL_DMA_MODE_NORMAL);
-
-  LL_DMA_SetPeriphIncMode(DMA1, LL_DMA_CHANNEL_4, LL_DMA_PERIPH_NOINCREMENT);
-
-  LL_DMA_SetMemoryIncMode(DMA1, LL_DMA_CHANNEL_4, LL_DMA_MEMORY_INCREMENT);
-
-  LL_DMA_SetPeriphSize(DMA1, LL_DMA_CHANNEL_4, LL_DMA_PDATAALIGN_BYTE);
-
-  LL_DMA_SetMemorySize(DMA1, LL_DMA_CHANNEL_4, LL_DMA_MDATAALIGN_BYTE);
-
-  /* USART1 interrupt Init */
-  NVIC_SetPriority(USART1_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
-  NVIC_EnableIRQ(USART1_IRQn);
-
   /* USER CODE BEGIN USART1_Init 1 */
 
   /* USER CODE END USART1_Init 1 */
-  USART_InitStruct.BaudRate = 115200;
-  USART_InitStruct.DataWidth = LL_USART_DATAWIDTH_8B;
-  USART_InitStruct.StopBits = LL_USART_STOPBITS_1;
-  USART_InitStruct.Parity = LL_USART_PARITY_NONE;
-  USART_InitStruct.TransferDirection = LL_USART_DIRECTION_TX_RX;
-  USART_InitStruct.HardwareFlowControl = LL_USART_HWCONTROL_RTS_CTS;
-  USART_InitStruct.OverSampling = LL_USART_OVERSAMPLING_16;
-  LL_USART_Init(USART1, &USART_InitStruct);
-  LL_USART_ConfigAsyncMode(USART1);
-  LL_USART_Enable(USART1);
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
@@ -868,89 +857,23 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 0 */
 
-  LL_USART_InitTypeDef USART_InitStruct = {0};
-
-  LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
-
-  /** Initializes the peripherals clock
-  */
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
-  PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /* Peripheral clock enable */
-  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_USART2);
-
-  LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOA);
-  /**USART2 GPIO Configuration
-  PA2   ------> USART2_TX
-  PA3   ------> USART2_RX
-  */
-  GPIO_InitStruct.Pin = LL_GPIO_PIN_2|LL_GPIO_PIN_3;
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
-  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  GPIO_InitStruct.Alternate = LL_GPIO_AF_7;
-  LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /* USART2 DMA Init */
-
-  /* USART2_RX Init */
-  LL_DMA_SetPeriphRequest(DMA1, LL_DMA_CHANNEL_6, LL_DMA_REQUEST_2);
-
-  LL_DMA_SetDataTransferDirection(DMA1, LL_DMA_CHANNEL_6, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
-
-  LL_DMA_SetChannelPriorityLevel(DMA1, LL_DMA_CHANNEL_6, LL_DMA_PRIORITY_LOW);
-
-  LL_DMA_SetMode(DMA1, LL_DMA_CHANNEL_6, LL_DMA_MODE_NORMAL);
-
-  LL_DMA_SetPeriphIncMode(DMA1, LL_DMA_CHANNEL_6, LL_DMA_PERIPH_NOINCREMENT);
-
-  LL_DMA_SetMemoryIncMode(DMA1, LL_DMA_CHANNEL_6, LL_DMA_MEMORY_INCREMENT);
-
-  LL_DMA_SetPeriphSize(DMA1, LL_DMA_CHANNEL_6, LL_DMA_PDATAALIGN_BYTE);
-
-  LL_DMA_SetMemorySize(DMA1, LL_DMA_CHANNEL_6, LL_DMA_MDATAALIGN_BYTE);
-
-  /* USART2_TX Init */
-  LL_DMA_SetPeriphRequest(DMA1, LL_DMA_CHANNEL_7, LL_DMA_REQUEST_2);
-
-  LL_DMA_SetDataTransferDirection(DMA1, LL_DMA_CHANNEL_7, LL_DMA_DIRECTION_MEMORY_TO_PERIPH);
-
-  LL_DMA_SetChannelPriorityLevel(DMA1, LL_DMA_CHANNEL_7, LL_DMA_PRIORITY_LOW);
-
-  LL_DMA_SetMode(DMA1, LL_DMA_CHANNEL_7, LL_DMA_MODE_NORMAL);
-
-  LL_DMA_SetPeriphIncMode(DMA1, LL_DMA_CHANNEL_7, LL_DMA_PERIPH_NOINCREMENT);
-
-  LL_DMA_SetMemoryIncMode(DMA1, LL_DMA_CHANNEL_7, LL_DMA_MEMORY_INCREMENT);
-
-  LL_DMA_SetPeriphSize(DMA1, LL_DMA_CHANNEL_7, LL_DMA_PDATAALIGN_BYTE);
-
-  LL_DMA_SetMemorySize(DMA1, LL_DMA_CHANNEL_7, LL_DMA_MDATAALIGN_BYTE);
-
-  /* USART2 interrupt Init */
-  NVIC_SetPriority(USART2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
-  NVIC_EnableIRQ(USART2_IRQn);
-
   /* USER CODE BEGIN USART2_Init 1 */
 
   /* USER CODE END USART2_Init 1 */
-  USART_InitStruct.BaudRate = 115200;
-  USART_InitStruct.DataWidth = LL_USART_DATAWIDTH_8B;
-  USART_InitStruct.StopBits = LL_USART_STOPBITS_1;
-  USART_InitStruct.Parity = LL_USART_PARITY_NONE;
-  USART_InitStruct.TransferDirection = LL_USART_DIRECTION_TX_RX;
-  USART_InitStruct.HardwareFlowControl = LL_USART_HWCONTROL_NONE;
-  USART_InitStruct.OverSampling = LL_USART_OVERSAMPLING_16;
-  LL_USART_Init(USART2, &USART_InitStruct);
-  LL_USART_ConfigAsyncMode(USART2);
-  LL_USART_Enable(USART2);
+  huart2.Instance = USART2;
+  huart2.Init.BaudRate = 115200;
+  huart2.Init.WordLength = UART_WORDLENGTH_8B;
+  huart2.Init.StopBits = UART_STOPBITS_1;
+  huart2.Init.Parity = UART_PARITY_NONE;
+  huart2.Init.Mode = UART_MODE_TX_RX;
+  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart2) != HAL_OK)
+  {
+    Error_Handler();
+  }
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
@@ -973,7 +896,7 @@ static void MX_USART3_UART_Init(void)
 
   /* USER CODE END USART3_Init 1 */
   huart3.Instance = USART3;
-  huart3.Init.BaudRate = 115200;
+  huart3.Init.BaudRate = 9600;
   huart3.Init.WordLength = UART_WORDLENGTH_8B;
   huart3.Init.StopBits = UART_STOPBITS_1;
   huart3.Init.Parity = UART_PARITY_NONE;
@@ -999,8 +922,8 @@ static void MX_DMA_Init(void)
 {
 
   /* DMA controller clock enable */
-  __HAL_RCC_DMA2_CLK_ENABLE();
   __HAL_RCC_DMA1_CLK_ENABLE();
+  __HAL_RCC_DMA2_CLK_ENABLE();
 
   /* DMA interrupt init */
   /* DMA1_Channel2_IRQn interrupt configuration */
@@ -1010,29 +933,20 @@ static void MX_DMA_Init(void)
   HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel3_IRQn);
   /* DMA1_Channel4_IRQn interrupt configuration */
-  NVIC_SetPriority(DMA1_Channel4_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
-  NVIC_EnableIRQ(DMA1_Channel4_IRQn);
+  HAL_NVIC_SetPriority(DMA1_Channel4_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_IRQn);
   /* DMA1_Channel5_IRQn interrupt configuration */
-  NVIC_SetPriority(DMA1_Channel5_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
-  NVIC_EnableIRQ(DMA1_Channel5_IRQn);
+  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
   /* DMA1_Channel6_IRQn interrupt configuration */
-  NVIC_SetPriority(DMA1_Channel6_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
-  NVIC_EnableIRQ(DMA1_Channel6_IRQn);
+  HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel6_IRQn);
   /* DMA1_Channel7_IRQn interrupt configuration */
-  NVIC_SetPriority(DMA1_Channel7_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
-  NVIC_EnableIRQ(DMA1_Channel7_IRQn);
+  HAL_NVIC_SetPriority(DMA1_Channel7_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel7_IRQn);
   /* DMA2_Channel4_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA2_Channel4_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA2_Channel4_IRQn);
-  /* DMA2_Channel5_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA2_Channel5_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(DMA2_Channel5_IRQn);
-  /* DMA2_Channel6_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA2_Channel6_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(DMA2_Channel6_IRQn);
-  /* DMA2_Channel7_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA2_Channel7_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(DMA2_Channel7_IRQn);
 
 }
 
@@ -1054,10 +968,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPS_RESET_Pin|RM92A_RESEST_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, GPS_RESET_Pin|RM92A_RESET_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, CTRL_SENSE_Pin|CTRL_COMM_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, SPI1_Cs_Pin|CTRL_SENSE_Pin|CTRL_COMM_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(BNO055_RESET_GPIO_Port, BNO055_RESET_Pin, GPIO_PIN_RESET);
@@ -1068,15 +982,15 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : GPS_RESET_Pin RM92A_RESEST_Pin */
-  GPIO_InitStruct.Pin = GPS_RESET_Pin|RM92A_RESEST_Pin;
+  /*Configure GPIO pins : GPS_RESET_Pin RM92A_RESET_Pin */
+  GPIO_InitStruct.Pin = GPS_RESET_Pin|RM92A_RESET_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : CTRL_SENSE_Pin CTRL_COMM_Pin */
-  GPIO_InitStruct.Pin = CTRL_SENSE_Pin|CTRL_COMM_Pin;
+  /*Configure GPIO pins : SPI1_Cs_Pin CTRL_SENSE_Pin CTRL_COMM_Pin */
+  GPIO_InitStruct.Pin = SPI1_Cs_Pin|CTRL_SENSE_Pin|CTRL_COMM_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -1113,6 +1027,69 @@ void HAL_Delay(uint32_t Delay)
 {
     osDelay(Delay);
 }
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	if (huart->Instance == USART1)
+	{
+		printf("%c", byte_uart_1);
+		xQueueSendToBackFromISR(messageHandlerQueue1Handle, &byte_uart_1, &xHigherPriorityTaskWoken);
+		HAL_UART_Receive_IT(huart, &byte_uart_1, 1);
+	}
+	if (huart->Instance == USART2)
+	{
+		xQueueSendToBackFromISR(messageHandlerQueue2Handle, &byte_uart_2, &xHigherPriorityTaskWoken);
+		HAL_UART_Receive_IT(huart, &byte_uart_2, 1);
+	}
+	if (huart->Instance == USART3)
+	{
+		xQueueSendToBackFromISR(messageHandlerQueue3Handle, &byte_uart_3, &xHigherPriorityTaskWoken);
+		HAL_UART_Receive_IT(huart, &byte_uart_3, 1);
+	}
+	portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+}
+
+uint8_t BSP_SD_ReadBlocks_DMA(uint32_t *pData, uint32_t ReadAddr, uint32_t NumOfBlocks)
+{
+
+  uint8_t sd_state = MSD_OK;
+  HAL_DMA_Abort(&hdma_sdmmc1);
+  HAL_DMA_Abort(&hdma_sdmmc1);
+
+  /* Deinitialize the Channel for new transfer */
+  HAL_DMA_DeInit(&hdma_sdmmc1);
+  HAL_DMA_DeInit(&hdma_sdmmc1);
+
+  HAL_DMA_Init(&hdma_sdmmc1);
+  /* Read block(s) in DMA transfer mode */
+  if (HAL_SD_ReadBlocks_DMA(&hsd1, (uint8_t *)pData, ReadAddr, NumOfBlocks) != HAL_OK)
+  {
+    sd_state = MSD_ERROR;
+  }
+
+  return sd_state;
+}
+uint8_t BSP_SD_WriteBlocks_DMA(uint32_t *pData, uint32_t WriteAddr, uint32_t NumOfBlocks)
+{
+  uint8_t sd_state = MSD_OK;
+  uint32_t tickstart = HAL_GetTick();
+  HAL_DMA_Abort(&hdma_sdmmc1);
+  HAL_DMA_Abort(&hdma_sdmmc1);
+
+  /* Deinitialize the Channel for new transfer */
+  HAL_DMA_DeInit(&hdma_sdmmc1);
+  HAL_DMA_DeInit(&hdma_sdmmc1);
+
+  /* Configure the DMA Channel */
+  HAL_DMA_Init(&hdma_sdmmc1);
+  /* Write block(s) in DMA transfer mode */
+  if (HAL_SD_WriteBlocks_DMA(&hsd1, (uint8_t *)pData, WriteAddr, NumOfBlocks) != HAL_OK)
+  {
+    sd_state = MSD_ERROR;
+  }
+
+  return sd_state;
+}
 
 /* USER CODE END 4 */
 
@@ -1126,13 +1103,98 @@ void HAL_Delay(uint32_t Delay)
 void StartMainTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
+	uint8_t received;
+	BaseType_t result;
+	HAL_UART_Receive_IT(&huart1, &byte_uart_1, 1);
+	HAL_UART_Receive_IT(&huart2, &byte_uart_2, 1);
+	HAL_UART_Receive_IT(&huart3, &byte_uart_3, 1);
   /* Infinite loop */
   for(;;)
   {
-      printf("Hello World!!\r\n");
-    osDelay(1000);
+	  while(uxQueueMessagesWaiting( messageHandlerQueue1Handle )){
+		  result = xQueueReceive(messageHandlerQueue1Handle, &received, 10);
+		  if(result == pdPASS){
+
+		  }
+	  }
+	  while(uxQueueMessagesWaiting( messageHandlerQueue2Handle )){
+		  result = xQueueReceive(messageHandlerQueue2Handle, &received, 10);
+		  if(result == pdPASS){
+			  printf("%c", received);
+		  }
+	  }
+	  while(uxQueueMessagesWaiting( messageHandlerQueue3Handle )){
+		  result = xQueueReceive(messageHandlerQueue3Handle, &received, 10);
+		  if(result == pdPASS){
+		    if(feed_nmea(received) == 0)
+		    {
+		    }
+		  }
+	  }
+    taskENTER_CRITICAL();
+    if(read_env_data() == 0)
+    {
+
+    }
+    taskEXIT_CRITICAL();
+    osDelay(100);
   }
   /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_SaveFile */
+/**
+* @brief Function implementing the saveFile thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_SaveFile */
+void SaveFile(void *argument)
+{
+  /* USER CODE BEGIN SaveFile */
+  uint8_t put_txt[128];
+  ///init_sd();
+  lora_init();
+
+  /* Infinite loop */
+  for(;;)
+  {
+	  size_t written = sprintf(&put_txt, "%ld, %d.%d, %d.%d, %d.%d, %d.%d, %ld, %d.%d, %d.%d, %d.%d \r\n",
+			  gnss_data.recent_timestamp,
+			  PSEUDO_FLOAT_PRINT(minmea_tofloat(&gnss_data.gga.latitude), 100),
+			  PSEUDO_FLOAT_PRINT(minmea_tofloat(&gnss_data.gga.longitude), 100),
+			  PSEUDO_FLOAT_PRINT(minmea_tofloat(&gnss_data.gga.altitude), 100),
+			  PSEUDO_FLOAT_PRINT(minmea_tofloat(&gnss_data.gsa.hdop), 100),
+			  env_data.timestamp,
+			  PSEUDO_FLOAT_PRINT(env_data.temp, 100),
+			  PSEUDO_FLOAT_PRINT(env_data.hum, 100),
+			  PSEUDO_FLOAT_PRINT(env_data.press, 100));
+    ///write_line(put_txt, written);
+	for(int i = 0; i < written; i++){
+		printf("%c", put_txt[i]);
+	  lora_send("%c", put_txt[i]);
+	}
+    osDelay(1000);
+  }
+  /* USER CODE END SaveFile */
+}
+
+/* USER CODE BEGIN Header_DownLink */
+/**
+* @brief Function implementing the downLink thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_DownLink */
+void DownLink(void *argument)
+{
+  /* USER CODE BEGIN DownLink */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(3000);
+  }
+  /* USER CODE END DownLink */
 }
 
 /**

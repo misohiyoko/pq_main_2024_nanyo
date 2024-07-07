@@ -5,20 +5,14 @@
 #ifndef BALLOON_MAIN_POWER_H
 #define BALLOON_MAIN_POWER_H
 
-#include <stdint-gcc.h>
+#include <stdint.h>
+#include "main.h"
 
-typedef enum {
-   ON = 1,
-   OFF = 0
-}PowerState;
+void set_comm_power(int mode);
+void set_sense_power(int mode);
 
-typedef struct {
-    PowerState sensorPower;
-    PowerState communicationPower;
-}PowerSupplyState;
-
-void ComSetSensorPower(PowerState state);
-void ComSetCommunicationPower(PowerState state);
+void reset_sense_power();
+void reset_comm_power();
 
 
 #endif //BALLOON_MAIN_POWER_H

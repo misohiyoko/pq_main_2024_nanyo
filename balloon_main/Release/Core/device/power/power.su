@@ -1,0 +1,4 @@
+../Core/device/power/power.c:8:6:set_comm_power	0	static
+../Core/device/power/power.c:11:6:set_sense_power	0	static
+../Core/device/power/power.c:14:6:reset_sense_power	8	static
+../Core/device/power/power.c:19:6:reset_comm_power	8	static

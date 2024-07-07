@@ -40,10 +40,12 @@ CPP_DEPS :=
 SUBDIRS := \
 Core/Src \
 Core/Startup \
+Core/device/env \
+Core/device/gnss \
 Core/device/lora \
 Core/device/power \
+Core/device/sd \
 Core/support/neopixel \
-Core/support/uart_dma \
 Drivers/STM32L4xx_HAL_Driver/Src \
 FATFS/App \
 FATFS/Target \

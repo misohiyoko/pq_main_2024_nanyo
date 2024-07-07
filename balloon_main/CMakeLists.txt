@@ -4,13 +4,14 @@ set(CMAKE_SYSTEM_VERSION 1)
 cmake_minimum_required(VERSION 3.28)
 
 # specify cross-compilers and tools
-set(CMAKE_C_COMPILER arm-none-eabi-gcc)
-set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
-set(CMAKE_ASM_COMPILER  arm-none-eabi-gcc)
-set(CMAKE_AR arm-none-eabi-ar)
-set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
-set(CMAKE_OBJDUMP arm-none-eabi-objdump)
-set(SIZE arm-none-eabi-size)
+set(ARM_GCC_PATH "/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin")
+set(CMAKE_C_COMPILER "${ARM_GCC_PATH}/arm-none-eabi-gcc")
+set(CMAKE_CXX_COMPILER "${ARM_GCC_PATH}/arm-none-eabi-g++")
+set(CMAKE_ASM_COMPILER  "${ARM_GCC_PATH}/arm-none-eabi-gcc")
+set(CMAKE_AR "${ARM_GCC_PATH}/arm-none-eabi-ar")
+set(CMAKE_OBJCOPY "${ARM_GCC_PATH}/arm-none-eabi-objcopy")
+set(CMAKE_OBJDUMP "${ARM_GCC_PATH}/arm-none-eabi-objdump")
+set(SIZE "${ARM_GCC_PATH}/arm-none-eabi-size")
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # project settings
@@ -51,9 +52,9 @@ endif ()
 
 include_directories(Core/Inc "${workspace_loc}/${ProjName}/Core/support" Drivers/STM32L4xx_HAL_Driver/Inc Drivers/STM32L4xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32L4xx/Include Drivers/CMSIS/Include FATFS/Target FATFS/App Middlewares/Third_Party/FatFs/src Middlewares/Third_Party/FreeRTOS/Source/include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F Core/device Core/support)
 
-add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32L431xx -DUSE_FULL_LL_DRIVER)
+add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32L431xx)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "CMSIS/*.*" "FATFS/*.*" "Middlewares/*.*" "Drivers/*.*")
+file(GLOB_RECURSE SOURCES "Core/*.*" "FATFS/*.*" "Middlewares/*.*" "Drivers/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32L431RBTX_FLASH.ld)
 

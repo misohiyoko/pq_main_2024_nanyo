@@ -12,17 +12,16 @@
 #define SD_DELAY 10
 
 int init_sd();
+int write_line(const uint8_t *text, size_t size);
 
 
 #define FATFS_TRY(f) \
     for(int i = 0; i < SD_MAX_TRY_NUM; i++){ \
     f_res = f; \
-    if(f_res  == FR_OK) \
+    if(f_res  == FR_OK || f_res == FR_EXIST) \
     { \
-    HAL_Delay(SD_DELAY); \
     break; \
     } \
-    HAL_Delay(SD_DELAY);   \
     if(i == SD_MAX_TRY_NUM){ \
     return f_res; \
     }                \

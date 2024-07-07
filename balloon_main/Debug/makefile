@@ -18,10 +18,12 @@ RM := rm -rf
 -include FATFS/Target/subdir.mk
 -include FATFS/App/subdir.mk
 -include Drivers/STM32L4xx_HAL_Driver/Src/subdir.mk
--include Core/support/uart_dma/subdir.mk
 -include Core/support/neopixel/subdir.mk
+-include Core/device/sd/subdir.mk
 -include Core/device/power/subdir.mk
 -include Core/device/lora/subdir.mk
+-include Core/device/gnss/subdir.mk
+-include Core/device/env/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk
@@ -96,8 +98,8 @@ all: main-build
 main-build: balloon_main.elf secondary-outputs
 
 # Tool invocations
-balloon_main.elf balloon_main.map: $(OBJS) $(USER_OBJS) C:\Users\genta\STM32CubeIDE\workspace_1.14.0\ws2\balloon_2024_nanyo\balloon_main\STM32L431RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "balloon_main.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\genta\STM32CubeIDE\workspace_1.14.0\ws2\balloon_2024_nanyo\balloon_main\STM32L431RBTX_FLASH.ld" -Wl,-Map="balloon_main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+balloon_main.elf balloon_main.map: $(OBJS) $(USER_OBJS) /Users/genta/pq_main_2024_nanyo/balloon_main/STM32L431RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "balloon_main.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/genta/pq_main_2024_nanyo/balloon_main/STM32L431RBTX_FLASH.ld" -Wl,-Map="balloon_main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
